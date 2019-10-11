@@ -14,7 +14,7 @@ It has the following subfolders:
 - scripts
 - style
 
-Tips for the file naming:
+Tips for file naming:
 
 - user lowercase with no spaces
 - use dashes (not underscore) for word seperation
