@@ -17,4 +17,4 @@ It has the following subfolders:
 Tips for the file naming:
 
 - user lowercase with no spaces
-
+- use dashes (not underscore) for word seperation
