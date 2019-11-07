@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+/* Window size is 500 x 708 */
+
+html, body {
+    background-color: #F9F9F9;
+    color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 0.5px 3px #888888;
+    background-color: #283593;
+    padding-bottom: 3%;
+    z-index: 2;
+}
+
+.logo {
+    padding: 3.8% 0% 0% 5%;
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    border-width: 1px;
+    background-color: white;
+    box-shadow: 0px -0.5px 3px #888888;
+    z-index: 2;
+}
+
+.navbar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 2.5% 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 28px;
+}
+
+.navbar a:hover {
+    color: #283593;
+}
+
+.navbar .fa-home {
+    color: #283593;
+}
+
+.search {
+    float: right;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    margin: 10px 30px 7px 0px;
+    padding: 7px 9px 0px 9px;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 103%;
+    transition: all 450ms ease;
+    cursor: text;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 1.5px;
+        height: 20px;
+        right: -5px;
+        top: 13px;
+        background: #FFFFFF;
+        border-radius: 3px;
+        transform: rotate(-45deg);
+        transition: all 450ms ease;
+    }
+
+    &.active,
+    &:hover {
+        width: 300px;
+        height: 35px;
+        border-radius: 20px;
+        margin-right: 20px;
+        margin-top: 13px;
+        margin-bottom: 0px;
+
+        &:after {
+            height: 0px;
+        }
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        font-family: Helvetica;
+        font-size: 15px;
+        color: inherit;
+        background: transparent;
+        outline-width: 0px;
+    }
+}
+
+.boxTop {
+    float: center;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: white;
+    margin-bottom: 3.5%;
+    margin-top: 15%;
+    box-shadow: 0.5px 0px 3px #888888;
+}
+
+.box {
+    float: center;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: white;
+    margin-bottom: 3.5%;
+    box-shadow: 0.5px 0px 3px #888888;
+}
+
+.boxBottom {
+    float: center;
+    width: 100%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    background-color: white;
+    margin-bottom: 15%;
+    box-shadow: 0.5px 0px 3px #888888;
+}
+
+.boxInner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 50%;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.textbookPicture {
+    width: 100%;
+    margin-bottom: 10%;
+    box-shadow: 4px 4px 3px #888888, -4px -4px 3px #888888;
+    z-index: 1;
+}
+
+.textbookPicture:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.03);
+    z-index: 1;
+}
+
+.textbookPicture:not(:hover) {
+    transition-duration: 0.3s;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.priceBox {
+    font-size: 12px;
+    text-align: left;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-top: 1px solid #bbbbbb;
+    padding-top: 3%;
+}
+
+.priceBoxText {
+    color: green;
+}
+
+.descriptionBox {
+    font-size: 15px;
+    text-align: left;
+    margin-left: 2%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.descriptionBoxText {
+    color: black;
+}
+
+.descriptionBox span a {
+    float: right;
+    text-align: center;
+    margin-right: 3%;
+    margin-top: -4%;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 30px;
+}
+
+.descriptionBox span a:hover {
+    color: #283593;
+}

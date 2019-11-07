@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\Ben's Files\\1 - BCIT CST\\2019W1\\COMP 1930\\Week 07\\boilerplate"
+		},
+		{
+			"path": "C:\\Ben's Files\\1 - BCIT CST\\2019W1\\COMP 1930\\Week 07\\bootstrap-example"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BookFinder"
+	}
+}
