@@ -72,8 +72,8 @@ html, body {
     margin: 10px 30px 7px 0px;
     padding: 7px 9px 0px 9px;
     border: 1.5px solid #FFFFFF;
-    border-radius: 103%;
-    transition: all 250ms ease;
+    border-radius: 50%;
+    transition: all 150ms ease;
     cursor: text;
 
     &:after {
@@ -86,16 +86,16 @@ html, body {
         background: #FFFFFF;
         border-radius: 3px;
         transform: rotate(-45deg);
-        transition: all 250ms ease;
+        transition: all 150ms ease;
     }
 
     &.active,
-    &:hover {
+    &:focus {
         width: 300px;
         height: 35px;
-        border-radius: 20px;
-        margin-right: 20px;
-        margin-top: 13px;
+        border-radius: 25px;
+        margin-right: 10px;
+        margin-top: 12px;
         margin-bottom: 0px;
 
         &:after {
