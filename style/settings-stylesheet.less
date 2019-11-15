@@ -2,13 +2,20 @@
 
 /* Window size is 500 x 708 */
 
-html, body {
+html,
+body {
     background-color: #F9F9F9;
-    color: white;
     padding: 0;
     margin: auto;
     max-width: 500px;
     float: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 
 .topbar {
@@ -30,6 +37,32 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
     color: white;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 8% 95%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container:hover {
+    cursor: pointer;
+    background-color: #e7e7e7;
+}
+
+.icon {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container:hover .icon {
+    color: #283593;
+}
+
+.firstContainer {
+    margin-top: 50px;
 }
 
 .navbar {
@@ -59,12 +92,13 @@ html, body {
     color: #283593;
 }
 
-.navbar .fa-home {
+.navbar .fa-cog {
     color: #283593;
 }
 
 .search {
     float: right;
+    color: white;
     position: relative;
     height: 20px;
     width: 20px;
@@ -107,110 +141,10 @@ html, body {
         width: 100%;
         border: none;
         box-sizing: border-box;
-        font-family: Roboto;
+        font-family: 'Roboto';
         font-size: 15px;
         color: inherit;
         background: transparent;
         outline-width: 0px;
     }
-}
-
-.boxTop {
-    float: center;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: white;
-    margin-bottom: 3.5%;
-    margin-top: 15%;
-    box-shadow: 0.5px 0px 3px #888888;
-}
-
-.box {
-    float: center;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: white;
-    margin-bottom: 3.5%;
-    box-shadow: 0.5px 0px 3px #888888;
-}
-
-.boxBottom {
-    float: center;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: white;
-    margin-bottom: 15%;
-    box-shadow: 0.5px 0px 3px #888888;
-}
-
-.boxInner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.textbookPicture {
-    width: 100%;
-    margin-bottom: 10%;
-    box-shadow: 4px 4px 3px #888888, -4px -4px 3px #888888;
-    z-index: 1;
-}
-
-.textbookPicture:hover {
-    transition-duration: 0.3s;
-    transform: scale(1.03);
-    z-index: 1;
-}
-
-.textbookPicture:not(:hover) {
-    transition-duration: 0.3s;
-    transform: scale(1);
-    z-index: 1;
-}
-
-.priceBox {
-    font-size: 12px;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 5px;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-top: 1px solid #bbbbbb;
-    padding-top: 3%;
-}
-
-.priceBoxText {
-    color: green;
-}
-
-.descriptionBox {
-    font-size: 15px;
-    text-align: left;
-    margin-left: 2%;
-    font-family: 'Roboto', sans-serif;
-}
-
-.descriptionBoxText {
-    color: black;
-}
-
-.descriptionBox span a {
-    float: right;
-    text-align: center;
-    margin-right: 3%;
-    margin-top: -4%;
-    transition: all 0.3s ease;
-    color: black;
-    font-size: 30px;
-}
-
-.descriptionBox span a:hover {
-    color: #283593;
 }

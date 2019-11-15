@@ -2,13 +2,83 @@
 
 /* Window size is 500 x 708 */
 
-html, body {
+html,
+body {
     background-color: #F9F9F9;
-    color: white;
     padding: 0;
     margin: auto;
     max-width: 500px;
     float: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.label {
+    color: #979797;
+    font-size: 9pt;
+    font-family: 'Roboto';
+    margin-top: 15px;
+    margin-left: 4px;
+}
+
+.input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #979797;
+    width: 99%;
+    margin-top: 10px;
+    margin-left: 4px;
+}
+
+input[type="submit"] {
+    width: 150px;
+    height: 40px;
+    border: 0.5px solid black;
+    background-color: #283593;
+    margin-top: 40px;
+    color: white;
+    font-family: 'Roboto';
+    transition: all 200ms ease;
+    border-radius: 2px;
+}
+
+input[type="submit"]:hover {
+    cursor: pointer;
+    color: #283593;
+    background-color: white;
+    transition: all 150ms ease;
+}
+
+.inputLast {
+    margin-bottom: 15%;
+}
+
+.profilePhoto {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+}
+
+.profilePhotoContainer {
+    margin-top: 70px;
+}
+
+.changeProfilePhoto {
+    font-size: 25px;
+    font-family: 'Roboto';
+    color: rgb(69, 175, 241);
+    margin-top: 2%;
+    margin-left: 27%;
+}
+
+.changeProfilePhoto:hover {
+    cursor: pointer;
 }
 
 .topbar {
@@ -59,12 +129,13 @@ html, body {
     color: #283593;
 }
 
-.navbar .fa-home {
+.navbar .fa-user {
     color: #283593;
 }
 
 .search {
     float: right;
+    color: white;
     position: relative;
     height: 20px;
     width: 20px;
@@ -107,110 +178,10 @@ html, body {
         width: 100%;
         border: none;
         box-sizing: border-box;
-        font-family: Roboto;
+        font-family: 'Roboto';
         font-size: 15px;
         color: inherit;
         background: transparent;
         outline-width: 0px;
     }
-}
-
-.boxTop {
-    float: center;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: white;
-    margin-bottom: 3.5%;
-    margin-top: 15%;
-    box-shadow: 0.5px 0px 3px #888888;
-}
-
-.box {
-    float: center;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: white;
-    margin-bottom: 3.5%;
-    box-shadow: 0.5px 0px 3px #888888;
-}
-
-.boxBottom {
-    float: center;
-    width: 100%;
-    padding-top: 3%;
-    padding-bottom: 3%;
-    background-color: white;
-    margin-bottom: 15%;
-    box-shadow: 0.5px 0px 3px #888888;
-}
-
-.boxInner {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
-    height: 50%;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.textbookPicture {
-    width: 100%;
-    margin-bottom: 10%;
-    box-shadow: 4px 4px 3px #888888, -4px -4px 3px #888888;
-    z-index: 1;
-}
-
-.textbookPicture:hover {
-    transition-duration: 0.3s;
-    transform: scale(1.03);
-    z-index: 1;
-}
-
-.textbookPicture:not(:hover) {
-    transition-duration: 0.3s;
-    transform: scale(1);
-    z-index: 1;
-}
-
-.priceBox {
-    font-size: 12px;
-    text-align: left;
-    font-family: 'Roboto', sans-serif;
-    margin-bottom: 5px;
-    margin-left: 2%;
-    margin-right: 2%;
-    border-top: 1px solid #bbbbbb;
-    padding-top: 3%;
-}
-
-.priceBoxText {
-    color: green;
-}
-
-.descriptionBox {
-    font-size: 15px;
-    text-align: left;
-    margin-left: 2%;
-    font-family: 'Roboto', sans-serif;
-}
-
-.descriptionBoxText {
-    color: black;
-}
-
-.descriptionBox span a {
-    float: right;
-    text-align: center;
-    margin-right: 3%;
-    margin-top: -4%;
-    transition: all 0.3s ease;
-    color: black;
-    font-size: 30px;
-}
-
-.descriptionBox span a:hover {
-    color: #283593;
 }
