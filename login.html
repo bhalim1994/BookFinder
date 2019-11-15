@@ -3,8 +3,12 @@
 
 <head>
     <title>Login Page</title>
-    <!--- include firebase related things-->
-    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Icon Scripts -->
+    <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
+
+    <!-- Less Script & Stylesheet -->
+    <link rel="stylesheet/less" type="text/css" href="style/login-stylesheet.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
     <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
@@ -13,7 +17,6 @@
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/login-stylesheet.css" />
     <link rel="stylesheet" type="text/css" href="style/login-widget-stylesheet.css" />
 
     <script>
@@ -33,13 +36,34 @@
 </head>
 
 <body>
-    <div style="text-align:center"><br /><br />
-        <h1>BOOKFINDER</h1><br /><br /><br /><br />
+    <div class="content">
+        <div id="logo">
+            <h1>BOOKFINDER</h1>
+        </div>
+        <div id="loginwidget">
+            <div id="firebaseui-auth-container"></div>
+            <div id="loader">Loading...</div>
+        </div>
+        <div class="headingsContainer">Get cheaper books from your fellow post-secondary peers on BookFinder.</div>
+        <div class="descriptionContainer firstContainer">
+            <div class="descriptionPicture"><i class="fas fa-book"></i></div>
+            <div class="descriptionText">
+                <span id="bold">Get updates on the cheapest books</span><span id="light"> for your classes.</span>
+            </div>
+        </div>
+        <div class="descriptionContainer">
+            <div class="descriptionPicture"><i class="fas fa-wallet"></i></div>
+            <div class="descriptionText">
+                <span id="bold">Sell textbooks easily</span><span id="light"> once you're done with them.</span>
+            </div>
+        </div>
+        <div class="descriptionContainer lastContainer">
+            <div class="descriptionPicture"><i class="fas fa-truck"></i></div>
+            <div class="descriptionText">
+                <span id="bold">Get textbooks delivered </span><span id="light"> to you for cheap.</span>
+            </div>
+        </div>
     </div>
-    <br />
-    <br />
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
 
     <script>
         // Initialize the FirebaseUI Widget using Firebase.

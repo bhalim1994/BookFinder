@@ -41,15 +41,24 @@ body {
 
 .container {
     display: grid;
-    grid-template-columns: 8% 95%;
+    grid-template-columns: 8% 92%;
     padding-top: 20px;
     padding-bottom: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
+.firstContainer {
+    margin-top: 58px;
+}
+
 .container:hover {
     cursor: pointer;
     background-color: #e7e7e7;
+    transition: all 150ms ease;
+}
+
+.container:not(:hover) {
+    transition: all 150ms ease;
 }
 
 .icon {
@@ -59,10 +68,11 @@ body {
 
 .container:hover .icon {
     color: #283593;
+    transition: all 150ms ease;
 }
 
-.firstContainer {
-    margin-top: 50px;
+.container:not(:hover) .icon {
+    transition: all 150ms ease;
 }
 
 .navbar {
