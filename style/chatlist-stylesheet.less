@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+/* Window size is 500 x 708 */
+
+html,
+body {
+    background-color: white;
+    padding: 0;
+    margin: auto;
+    max-width: 500px;
+    float: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 0.5px 3px #888888;
+    background-color: #283593;
+    padding-bottom: 18px;
+    z-index: 2;
+    max-width: 500px;
+    margin: auto;
+}
+
+.logo {
+    padding: 3.8% 0% 0% 5%;
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+.content {
+    margin-top: 70px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.content span {
+    font-weight: bold;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-top: 5px;
+    padding-top: 8px;
+    margin-bottom: 5px;
+    padding-bottom: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.firstContainer{
+    padding-top: 8px;
+    margin-top: 15px;
+}
+
+.lastContainer{
+    margin-bottom: 60px;
+}
+
+.container:hover {
+    cursor: pointer;
+    background-color: #f1f0f0;
+    transition: all 150ms ease;
+}
+
+.container:not(:hover) {
+    transition: all 150ms ease;
+}
+
+.chatPicture img{
+    border-radius:50%;
+    height: 70px;
+    margin-left: 15px;
+}
+
+.chatDescription{
+    margin-top: 14px;
+    margin-left: 6px;
+}
+
+.chatText{
+    margin-top: 5px;
+    margin-left: -2px;
+    color: #979797;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    border-width: 1px;
+    background-color: white;
+    box-shadow: 0px -0.5px 3px #888888;
+    z-index: 2;
+    max-width: 500px;
+    margin: auto;
+}
+
+.navbar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 2.5% 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 28px;
+}
+
+.navbar a:hover {
+    color: #283593;
+}
+
+.navbar .fa-comment {
+    color: #283593;
+}
+
+.search {
+    float: right;
+    color: white;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    margin: 10px 30px 7px 0px;
+    padding: 7px 9px 0px 9px;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 50%;
+    transition: all 150ms ease;
+    cursor: text;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 1.5px;
+        height: 20px;
+        right: -5px;
+        top: 13px;
+        background: #FFFFFF;
+        border-radius: 3px;
+        transform: rotate(-45deg);
+        transition: all 150ms ease;
+    }
+
+    &.active,
+    &:focus {
+        width: 300px;
+        height: 35px;
+        border-radius: 25px;
+        margin-right: 10px;
+        margin-top: 12px;
+        margin-bottom: 0px;
+
+        &:after {
+            height: 0px;
+        }
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        font-family: 'Roboto';
+        font-size: 15px;
+        color: inherit;
+        background: transparent;
+        outline-width: 0px;
+    }
+}

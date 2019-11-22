@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+/* Window size is 500 x 708 */
+
+html,
+body {
+    background-color: white;
+    padding: 0;
+    margin: auto;
+    max-width: 500px;
+    float: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.chat {
+    width: 500px;
+    height: 100vh;
+    background: white;
+    box-shadow:0 0 30px -5px grey;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chat_header {
+    padding: 15px;
+    border-bottom: 4px solid #283593;
+    background: white;
+    color: black;
+}
+
+.chat_arrow{
+    float:left;
+    margin-right: 15px;
+    padding-right: 5px;
+}
+
+.chat_arrow a:hover {
+    cursor: pointer;
+    color: #283593;
+    transition: all 100ms ease;
+}
+
+.chat_arrow:not(:hover) {
+    transition: all 100ms ease;
+}
+
+.chat_arrow a {
+    font-size:30px;
+    color:black;
+}
+
+.chat_status {
+    font-size: 11px;
+    margin: 4px 0 -4px;
+}
+
+.chat_avatar {
+    float: right;
+    width: 42px;
+    border-radius: 50%;
+    margin-top: -3px;
+}
+
+.chat_input {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 8px);
+    padding: 10px 4px 6px;
+    background: white;
+}
+
+.chat_text {
+    width: calc(85% - 10px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 0 5px 5px;
+    vertical-align: top;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.chat_submit {
+    width: calc(15% - 5px);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 1.5px 5px 5px 0;
+    vertical-align: top;
+    border: 1px solid #283593;
+    cursor: pointer;
+    color: #283593;
+    border-radius: 0 8px 8px 0;
+    transition: all .4s;
+}
+
+.chat_submit:hover {
+    background: #283593;
+    color: white;
+}
+
+.chat_bubble-1,
+.chat_bubble-2 {
+    padding: 10px;
+    margin: 13px 17px;
+    width: 200px;
+    font-size: 14px;
+}
+
+.chat_bubble-1 {
+    border: 1px solid #283593;
+    border-radius: 12px 12px 12px 0;
+}
+
+.chat_bubble-2 {
+    border: 1px solid #888888;
+    border-radius: 12px 12px 0 12px;
+    margin-left: 250px;
+}
+
+.chat_s {
+    min-height: 80.5%;
+    max-height: 80.5%;
+    overflow-y: scroll;
+    padding: 15px 0 0;
+}

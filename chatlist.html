@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Settings Page</title>
+    <title>Chat List</title>
 
     <!-- FireBase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
@@ -16,7 +16,7 @@
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
 
     <!-- Less Script & Stylesheet -->
-    <link rel="stylesheet/less" type="text/css" href="style/settings-stylesheet.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/chatlist-stylesheet.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
     <!-- Import jQuery -->
@@ -34,31 +34,63 @@
 
     <!-- Page Content -->
     <div class="content">
-        <div class="notifContainer container firstContainer">
-            <div class="notifPicture icon"><i class="fas fa-bell"></i></div>
-            <div class="notifText text">Notifications</div>
+        <span>&nbsp;&nbsp;Messages</span>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container firstContainer">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
         </div>
-        <div class="privacyContainer container">
-            <div class="privacyPicture icon"><i class="fas fa-lock"></i></div>
-            <div class="privacyText text">Privacy</div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
         </div>
-        <div class="securityContainer container">
-            <div class="securityPicture icon"><i class="fas fa-shield-alt"></i></div>
-            <div class="securityText text">Security</div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
         </div>
-        <div class="helpContainer container">
-            <div class="helpPicture icon"><i class="fas fa-question-circle"></i></div>
-            <div class="helpText text">Help</div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
         </div>
-        <div class="aboutContainer container">
-            <div class="aboutPicture icon"><i class="fas fa-info-circle"></i></div>
-            <div class="aboutText text">About</div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
         </div>
-        <div class="logoutContainer container lastContainer">
-            <div class="logoutPicture icon"><i class="fas fa-sign-out-alt"></i></div>
-            <div class="logoutText text">Log Out</div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
         </div>
-    </div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
+        </div>
+        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container lastContainer">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
+        </div>
     </div>
     <!-- /.content -->
 
@@ -66,7 +98,7 @@
         <a href="main.html"><i class="fas fa-home"></i></a>
         <a href="sell-1.html"><i class="fas fa-hand-holding-usd"></i></a>
         <a href="profile.html"><i class="fas fa-user"></i></a>
-        <a href="chat-list.html"><i class="fas fa-comment"></i></a>
+        <a href="chatlist.html"><i class="fas fa-comment"></i></a>
         <a href="settings.html"><i class="fas fa-cog"></i></a>
     </div>
 

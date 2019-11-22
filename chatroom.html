@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Chat List</title>
+
+    <!-- FireBase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+    <script src="scripts/firebase-config.js"></script>
+
+    <!-- Icon Scripts -->
+    <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
+
+    <!-- Less Script & Stylesheet -->
+    <link rel="stylesheet/less" type="text/css" href="style/chatroom-stylesheet.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <!-- Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="scripts/chatroom.js"></script>
+</head>
+
+<body>
+    <!-- Page Content -->
+    <div class="content">
+        <div class="chat">
+            <div class="chat_header">
+                <img class="chat_avatar" src="images/sample-profile-pic.png" />
+                <div onclick="window.location.href = 'chatroom.html'" class="chat_arrow"><a href="chatlist.html"><i
+                            class="fas fa-arrow-left"></i></a></div>
+                <div>Jenny Hsieh
+                    <div class="chat_status">Online</div>
+                </div>
+            </div>
+            <div class="chat_s">
+                <div class="chat_bubble-1">Hi</div>
+                <div class="chat_bubble-1">How are you?</div>
+                <div class="chat_bubble-2">Fine. What about you?</div>
+                <div class="chat_bubble-1">I'm great. Wanna meet?</div>
+                <div class="chat_bubble-2">Sure</div>
+                <div class="chat_bubble-2">What time?</div>
+                <div class="chat_bubble-1">Around 5pm</div>
+            </div>
+            <div class="chat_input">
+                <input placeholder="Type here..." class="chat_text" onkeypress="if(event.keyCode === 13){add()}"><button
+                    onclick="add()" class="chat_submit fa fa-send"></button>
+            </div>
+        </div>
+    </div>
+    <!-- /.content -->
+
+    <!-- Javascript references -->
+    <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+    <script type="text/javascript" src="scripts/search-widget.js"></script>
+</body>
+
+</html>
