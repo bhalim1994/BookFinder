@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+        <script src="scripts/firebase-config.js"></script>
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./style/signup-stylesheet.css"/>
+    </head>
+    <body>
+        
+        <div class="signUp">
+            <form>
+                <div class="input-group" style="margin-bottom: 24px;">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">First and last name</span>
+                    </div>
+                    <input type="text" aria-label="First name" class="form-control" id="firstName">
+                    <input type="text" aria-label="Last name" class="form-control" id="lastName">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="UniversitySelection">University</label>
+                    </div>
+                    <select class="custom-select" id="university">
+                        <option selected>Choose...</option>
+                        <option value="British Columbia Institute of Technology">British Columbia Institute of Technology</option>
+                        <option value="University of British Columbia">University of British Columbia</option>
+                        <option value="Simon Fraser University">Simon Fraser University</option>
+                    </select>
+                </div>
+
+                <div class="form-group" >
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted" style="color: white;">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <small id="signupPage" class="form-text text-muted"> <a href="login.html">Have an account already? Click here to Login</a></small>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" class="btn btn-primary" id="submit">Sign Up</button>
+                </div>
+            </form>
+
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="scripts/signup.js"></script>
+    </body>
+</html>

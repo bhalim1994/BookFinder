@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <title>Profile Page</title>
 
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+    <script src="scripts/firebase-config.js"></script>
+
     <!-- Icon Scripts -->
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
 
@@ -45,7 +52,7 @@
         <div><input class="phoneNumberInput input" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" /></div>
         <div class="university label">University</div>
         <div><input class="universityInput input" type="text" /></div>
-        <div><input class="inputLast center" type="submit" value="Submit"></div>
+        <div><button class="inputLast center" type="submit">Submit</div>
         </form>
     </div>
     <!-- /.content -->
@@ -54,12 +61,13 @@
         <a href="main.html"><i class="fas fa-home"></i></a>
         <a href="#"><i class="fas fa-hand-holding-usd"></i></a>
         <a href="profile.html"><i class="fas fa-user"></i></a>
-        <a href="#"><i class="fas fa-comment"></i></a>
+        <a href="chatlist.html"><i class="fas fa-comment"></i></a>
         <a href="settings.html"><i class="fas fa-cog"></i></a>
     </div>
 
-    <!-- Javascript for search bar -->
-    <script type="text/javascript" src="scripts/main-javascript.js"></script>
+    <!-- Javascript references -->
+    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type='text/javascript' src="scripts/profile.js"></script>
 </body>
 
 </html>

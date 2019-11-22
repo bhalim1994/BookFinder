@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <title>Main Page</title>
 
+    <!-- FireBase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+    <script src="scripts/firebase-config.js"></script>
+
     <!-- Icon Scripts -->
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
 
@@ -80,12 +87,13 @@
         <a href="main.html"><i class="fas fa-home"></i></a>
         <a href="#"><i class="fas fa-hand-holding-usd"></i></a>
         <a href="profile.html"><i class="fas fa-user"></i></a>
-        <a href="#"><i class="fas fa-comment"></i></a>
+        <a href="chatlist.html"><i class="fas fa-comment"></i></a>
         <a href="settings.html"><i class="fas fa-cog"></i></a>
     </div>
 
     <!-- Javascript for search bar -->
-    <script type="text/javascript" src="scripts/main-javascript.js"></script>
+    <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+    <script type="text/javascript" src="scripts/search-widget.js"></script>
 </body>
 
 </html>

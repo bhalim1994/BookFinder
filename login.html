@@ -3,6 +3,17 @@
 
 <head>
     <title>Login Page</title>
+
+    <!-- FireBase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+    <script src="scripts/firebase-config.js"></script>
+
+    <!-- Import JQuery -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
     <!-- Icon Scripts -->
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
 
@@ -10,29 +21,6 @@
     <link rel="stylesheet/less" type="text/css" href="style/login-stylesheet.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
-    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-    <link rel="stylesheet" type="text/css" href="style/login-widget-stylesheet.css" />
-
-    <script>
-        // Your web app's Firebase configuration
-        var firebaseConfig = {
-            apiKey: "AIzaSyA0aEEKjsAIO88GyL7wJ8OQX_h2kWVwb40",
-            authDomain: "bookfinder-2b31b.firebaseapp.com",
-            databaseURL: "https://bookfinder-2b31b.firebaseio.com",
-            projectId: "bookfinder-2b31b",
-            storageBucket: "bookfinder-2b31b.appspot.com",
-            messagingSenderId: "599245595354",
-            appId: "1:599245595354:web:185776ffe10c451c613be3"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-    </script>
 </head>
 
 <body>
@@ -40,9 +28,25 @@
         <div id="logo">
             <h1>BOOKFINDER</h1>
         </div>
-        <div id="loginwidget">
-            <div id="firebaseui-auth-container"></div>
-            <div id="loader">Loading...</div>
+        <div class="loginContainer">
+            <form>
+                <div class="emailContainer">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email">
+                    <small id="emailHelp">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password Should be longer than 6 characters</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <div class="form-group" style="text-align: center;">
+                    <small id="signupPage" class="form-text text-muted"> <a href="SignUp.html">Dont Have an Account?
+                            Click here to Sign Up</a></small>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" id="submit">Log in</button>
+                </div>
+            </form>
         </div>
         <div class="headingsContainer">Get cheaper books from your fellow post-secondary peers on BookFinder.</div>
         <div class="descriptionContainer firstContainer">
@@ -64,46 +68,8 @@
             </div>
         </div>
     </div>
+    <script src="scripts/login.js"></script>
 
-    <script>
-        // Initialize the FirebaseUI Widget using Firebase.
-        var ui = new firebaseui.auth.AuthUI(firebase.auth());
-
-        var uiConfig = {
-            callbacks: {
-                signInSuccessWithAuthResult: function (authResult, redirectUrl) {
-                    // User successfully signed in.
-                    // Return type determines whether we continue the redirect automatically
-                    // or whether we leave that to developer to handle.
-                    return true;
-                },
-                uiShown: function () {
-                    // The widget is rendered.
-                    // Hide the loader.
-                    document.getElementById('loader').style.display = 'none';
-                }
-            },
-            // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
-            signInFlow: 'popup',
-            signInSuccessUrl: 'main.html',
-            signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                // firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-                // firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-                // firebase.auth.TwitterAuthProvider.PROVIDER_ID,
-                // firebase.auth.GithubAuthProvider.PROVIDER_ID,
-                firebase.auth.EmailAuthProvider.PROVIDER_ID,
-                // firebase.auth.PhoneAuthProvider.PROVIDER_ID
-            ],
-            // Terms of service url.
-            tosUrl: 'main.html',
-            // Privacy policy url.
-            privacyPolicyUrl: 'main.html'
-        };
-
-        // The start method will wait until the DOM is loaded.
-        ui.start('#firebaseui-auth-container', uiConfig);
-    </script>
 </body>
 
 </html>
