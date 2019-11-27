@@ -47,8 +47,8 @@
                 <div class="chat_bubble-1">Around 5pm</div>
             </div>
             <div class="chat_input">
-                <input placeholder="Type here..." class="chat_text" onkeypress="if(event.keyCode === 13){add()}"><button
-                    onclick="add()" class="chat_submit fa fa-send"></button>
+                <input type="text" placeholder="Type here..." class="chat_text" onkeypress="if(event.keyCode === 13){add();clear();}"><button
+                    onclick="add();clear();" class="chat_submit fa fa-send"></button>
             </div>
         </div>
     </div>
