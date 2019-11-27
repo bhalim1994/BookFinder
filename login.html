@@ -4,6 +4,11 @@
 <head>
     <title>Login Page</title>
 
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
     <!-- FireBase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
@@ -11,11 +16,11 @@
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
     <script src="scripts/firebase-config.js"></script>
 
-    <!-- Import JQuery -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-
     <!-- Icon Scripts -->
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
+
+    <!-- Import JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <!-- Less Script & Stylesheet -->
     <link rel="stylesheet/less" type="text/css" href="style/login-stylesheet.less" />
@@ -40,7 +45,7 @@
                     <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
                 <div class="form-group" style="text-align: center;">
-                    <small id="signupPage" class="form-text text-muted"> <a href="SignUp.html">Dont Have an Account?
+                    <small id="signupPage" class="form-text text-muted"> <a href="signup.html">Dont Have an Account?
                             Click here to Sign Up</a></small>
                 </div>
                 <div style="text-align: center;">
@@ -68,6 +73,8 @@
             </div>
         </div>
     </div>
+
+
     <script src="scripts/login.js"></script>
 
 </body>
