@@ -22,7 +22,7 @@
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
 
     <!-- Less Script & Stylesheet -->
-    <link rel="stylesheet/less" type="text/css" href="style/main-stylesheet.less" />
+    <link rel="stylesheet/less" type="text/css" href="./style/main-stylesheet.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
     <!-- Import jQuery -->
@@ -30,9 +30,11 @@
 </head>
 
 <body>
-
     <div class="topbar">
         <span class="logo">BOOKFINDER</span>
+        <label class="search" for="inpt_search">
+            <input id="inpt_search" type="text" />
+        </label>
     </div>
 
     <!-- Page Content -->
@@ -53,6 +55,8 @@
     <!-- Javascript for search bar -->
     <script type="text/javascript" src="scripts/firebase-auth.js"></script>
     <script type="text/javascript" src="scripts/search-widget.js"></script>
+
+    <script src="./scripts/postPage.js"></script>
 
 </body>
 

@@ -120,6 +120,8 @@ function createPost(title, price, imgCount, gsReference, id){
 
 //Opens On the post that was clicked
 function openPage(id){
+    localStorage.setItem("postID",id);
+    window.location.href = "./postPage.html";
 
 }
 
