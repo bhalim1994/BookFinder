@@ -12,11 +12,11 @@ docRef.onSnapshot(function(querySnapshot){
             createPost( doc.data().Title,
                         doc.data().Price,
                         doc.data().imgCount,
-                        gsReference);
+                        gsReference,
+                        doc.id);
         }
     })
 });
-
 
  
 //Body
@@ -28,7 +28,6 @@ container.style.marginBottom = "15%";
 
 
 function createPost(title, price, imgCount, gsReference, id){
-
     //Outer box
     var boxOut = document.createElement("div");
     boxOut.style.width = "100%";
@@ -49,10 +48,12 @@ function createPost(title, price, imgCount, gsReference, id){
     boxIn.style.marginBottom = "0";
 
     var a = document.createElement("a");
+    console.log(id);
     a.href = "#";
 
     //getting images
-    var img = document.createElement("IMG"); 
+    var img = document.createElement("IMG");
+    img.id = id; 
     gsReference.child("1.jpeg").getDownloadURL().then(onResolve, onReject);
     gsReference.child("1.png").getDownloadURL().then(onResolve, onReject);
     gsReference.child("1.jpg").getDownloadURL().then(onResolve, onReject);
@@ -93,10 +94,7 @@ function createPost(title, price, imgCount, gsReference, id){
     var descriptionBoxText = document.createElement("span");
     descriptionBoxText.innerHTML = title;
     descriptionBoxText.style.color = "black";
-
-
-
- 
+    
 
     
     container.appendChild(boxOut);
@@ -109,8 +107,20 @@ function createPost(title, price, imgCount, gsReference, id){
     descriptionBox.appendChild(descriptionBoxText);
     
     
+
+    $("body").unbind().on("click", function(event) {
+        openPage(event.target.id)
+    });
     
     
     
     
 }
+
+
+//Opens On the post that was clicked
+function openPage(id){
+
+}
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>PostPage</title>
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> 
+
+    <!-- FireBase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-storage.js"></script> 
+    <script src="scripts/firebase-config.js"></script> 
+
+    <!-- Icon Scripts -->
+    <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
+
+    <!-- Less Script & Stylesheet -->
+    <link rel="stylesheet/less" type="text/css" href="style/main-stylesheet.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <!-- Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <span class="logo">BOOKFINDER</span>
+    </div>
+
+    <!-- Page Content -->
+    <div class="content" id="container">
+
+
+    </div>
+    <!-- /.content -->
+
+    <div class="navbar">
+        <a href="main.html"><i class="fas fa-home"></i></a>
+        <a href="#"><i class="fas fa-hand-holding-usd"></i></a>
+        <a href="profile.html"><i class="fas fa-user"></i></a>
+        <a href="chatlist.html"><i class="fas fa-comment"></i></a>
+        <a href="settings.html"><i class="fas fa-cog"></i></a>
+    </div>
+
+    <!-- Javascript for search bar -->
+    <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+    <script type="text/javascript" src="scripts/search-widget.js"></script>
+
+</body>
+
+</html>
