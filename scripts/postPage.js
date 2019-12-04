@@ -21,7 +21,7 @@ docRef.get().then(function(doc) {
 function createPost(title, gsReference){
     var content = document.getElementById("container");
 
-    //getting images
+    //Getting images
     var img = document.createElement("IMG");
     gsReference.child("1.jpeg").getDownloadURL().then(onResolve, onReject);
     gsReference.child("1.png").getDownloadURL().then(onResolve, onReject);

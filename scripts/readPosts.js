@@ -95,8 +95,6 @@ function createPost(title, price, imgCount, gsReference, id){
     descriptionBoxText.innerHTML = title;
     descriptionBoxText.style.color = "black";
     
-
-    
     container.appendChild(boxOut);
     boxOut.appendChild(boxIn);
     boxIn.appendChild(a);
@@ -108,17 +106,13 @@ function createPost(title, price, imgCount, gsReference, id){
     
     
 
-    $("body").unbind().on("click", function(event) {
+    $("#container").unbind().on("click", function(event) {
         openPage(event.target.id)
     });
-    
-    
-    
-    
 }
 
 
-//Opens On the post that was clicked
+//Opens the post that was clicked
 function openPage(id){
     localStorage.setItem("postID",id);
     window.location.href = "./postPage.html";
