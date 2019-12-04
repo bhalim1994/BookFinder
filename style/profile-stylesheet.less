@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
-html,
-body {
+html, body {
     background-color: white;
     padding: 0;
     margin: auto;
-    max-width: 500px;
     float: center;
 }
 
@@ -21,7 +19,7 @@ body {
     font-size: 9pt;
     font-family: 'Roboto';
     margin-top: 15px;
-    margin-left: 4px;
+    margin-left: 5px;
 }
 
 .input {
@@ -32,6 +30,24 @@ body {
     width: 99%;
     margin-top: 10px;
     margin-left: 4px;
+}
+
+select {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #979797;
+    border-radius: 5px;
+    outline: 0;
+    background: #ffffff;
+    width: 99%;
+    height: 40px;
+    margin-top: 13px;
+    margin-left: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+option {
+    color: black;
 }
 
 button[type="submit"] {
@@ -71,8 +87,8 @@ button[type="submit"]:hover {
     font-size: 25px;
     font-family: 'Roboto';
     color: rgb(69, 175, 241);
-    margin-top: 2%;
-    margin-left: 27%;
+    margin-top: 15px;
+    text-align: center;
 }
 
 .changeProfilePhoto:hover {
@@ -88,12 +104,11 @@ button[type="submit"]:hover {
     background-color: #283593;
     padding-bottom: 18px;
     z-index: 2;
-    max-width: 500px;
     margin: auto;
 }
 
 .logo {
-    padding: 3.8% 0% 0% 5%;
+    padding: 20px 0px 0px 15px;
     float: left;
     font-family: 'Montserrat', sans-serif;
     font-weight: bolder;
@@ -109,7 +124,6 @@ button[type="submit"]:hover {
     background-color: white;
     box-shadow: 0px -0.5px 3px #888888;
     z-index: 2;
-    max-width: 500px;
     margin: auto;
 }
 
@@ -117,7 +131,7 @@ button[type="submit"]:hover {
     float: left;
     width: 20%;
     text-align: center;
-    padding: 2.5% 0;
+    padding: 20px 0;
     transition: all 0.3s ease;
     color: black;
     font-size: 28px;
@@ -182,4 +196,10 @@ button[type="submit"]:hover {
         background: transparent;
         outline-width: 0px;
     }
+}
+
+.search input::placeholder {
+    font-weight: lighter;
+    color: #e0e0e0;
+    opacity: 50%;
 }

@@ -12,7 +12,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         		document.getElementById("last").value = doc.data().LastName;
         		document.getElementById("username").value = doc.data().UserName;
         		document.getElementById("email").value = doc.data().Email;
-        		document.getElementById("university").value = doc.data().University;
+				document.getElementById("university").value = doc.data().University;
         		document.getElementById("phone").value = doc.data().PhoneNumber;
         	} else {
             	// doc.data() will be undefined in this case
@@ -46,7 +46,6 @@ $("#submit").closest("form").on("submit", function(event){
 	database.collection("Users").doc(user.uid).update({
 		FirstName: first,
 		LastName: last,
-		Major: "", //Will implement later.
 		PhoneNumber: phone,
 		University: university,
 		UserName: username
@@ -55,6 +54,7 @@ $("#submit").closest("form").on("submit", function(event){
 		alert("Profile Updated!");
 		console.log("Profile successfully updated!");
 	})
+	
 	.catch(function(error) {
 		// The document probably doesn't exist.
 		alert("Error updating Profile");

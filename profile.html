@@ -52,11 +52,17 @@
         <div class="username label">Username</div>
         <div><input id="username" class="usernameInput input" type="text" /></div>
         <div class="email label">Email Address</div>
-        <div><input id="email" class="emailInput input" type="email" /></div>
+        <div><input id="email" class="emailInput input" type="email" readonly/></div>
         <div class="phoneNumber label">Phone Number</div>
         <div><input id="phone" class="phoneNumberInput input" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
         <div class="university label">University</div>
-        <div><input id="university" class="universityInput input" type="text" /></div>
+        <div>
+            <select class="universityInput" id="university">
+                <option value="British Columbia Institute of Technology">British Columbia Institute of Technology</option>
+                <option value="University of British Columbia">University of British Columbia</option>
+                <option value="Simon Fraser University">Simon Fraser University</option>
+            </select>
+        </div>
         <div><button id="submit" class="inputLast center" type="submit">Submit</div>
         </form>
     </div>
@@ -70,7 +76,11 @@
         <a href="settings.html"><i class="fas fa-cog"></i></a>
     </div>
 
-    <!-- Javascript references -->
+    <!-- Javascript for search bar and authentification -->
+    <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+    <script type="text/javascript" src="scripts/search-widget.js"></script>
+
+    <!-- Javascript for profile update -->
     <script type='text/javascript' src="scripts/profile.js"></script>
 </body>
 
