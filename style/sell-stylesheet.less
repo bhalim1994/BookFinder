@@ -22,7 +22,7 @@ body {
 }
 
 .topBuffer {
-    margin-top: 69px;
+    margin-top: 70px;
 }
 
 .input {
@@ -120,111 +120,6 @@ button[type="submit"]:hover {
     margin-bottom: 95px;
 }
 
-.topbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: auto;
-    box-shadow: 0px 0.5px 3px #888888;
-    background-color: #283593;
-    padding-bottom: 18px;
-    z-index: 2;
-    margin: auto;
-}
-
-.logo {
-    padding: 20px 0px 0px 15px;
-    float: left;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: bolder;
-    color: white;
-}
-
-.navbar {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    border-width: 1px;
-    background-color: white;
-    box-shadow: 0px -0.5px 3px #888888;
-    z-index: 2;
-    margin: auto;
-}
-
-.navbar a {
-    float: left;
-    width: 20%;
-    text-align: center;
-    padding: 20px 0;
-    transition: all 0.3s ease;
-    color: black;
-    font-size: 28px;
-}
-
-.navbar a:hover {
-    color: #283593;
-}
-
 .navbar .fa-hand-holding-usd {
     color: #283593;
-}
-
-.search {
-    float: right;
-    color: white;
-    position: relative;
-    height: 20px;
-    width: 20px;
-    box-sizing: border-box;
-    margin: 10px 30px 7px 0px;
-    padding: 7px 9px 0px 9px;
-    border: 1.5px solid #FFFFFF;
-    border-radius: 50%;
-    transition: all 150ms ease;
-    cursor: text;
-
-    &:after {
-        content: "";
-        position: absolute;
-        width: 1.5px;
-        height: 20px;
-        right: -5px;
-        top: 13px;
-        background: #FFFFFF;
-        border-radius: 3px;
-        transform: rotate(-45deg);
-        transition: all 150ms ease;
-    }
-
-    &.active,
-    &:focus {
-        width: 300px;
-        height: 35px;
-        border-radius: 25px;
-        margin-right: 10px;
-        margin-top: 12px;
-        margin-bottom: 0px;
-
-        &:after {
-            height: 0px;
-        }
-    }
-
-    input {
-        width: 100%;
-        border: none;
-        box-sizing: border-box;
-        font-family: 'Roboto';
-        font-size: 15px;
-        color: inherit;
-        background: transparent;
-        outline-width: 0px;
-    }
-}
-
-.search input::placeholder {
-    font-weight: lighter;
-    color: #e0e0e0;
-    opacity: 50%;
 }
