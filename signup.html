@@ -2,15 +2,22 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <title>Sign Up Page</title>
 
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Control of cache errors -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
+
+    <!-- Control of expiry date -->
     <meta http-equiv="Expires" content="0">
+
+    <!-- Suppresses security issues -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <!-- Firebase -->
+    <!-- Firebase Scripts-->
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
@@ -41,7 +48,8 @@
                 <div class="universityContainer">
                     <select id="university">
                         <option selected>Choose a university</option>
-                        <option value="British Columbia Institute of Technology">British Columbia Institute of Technology</option>
+                        <option value="British Columbia Institute of Technology">British Columbia Institute of
+                            Technology</option>
                         <option value="University of British Columbia">University of British Columbia</option>
                         <option value="Simon Fraser University">Simon Fraser University</option>
                     </select>
@@ -50,38 +58,20 @@
                     <input type="email" class="form-control" id="email" placeholder="Enter email">
                 </div>
                 <div class="passwordContainer">
-                    <input type="password" class="form-control" id="password" placeholder="Enter a password more than 6 characters">
+                    <input type="password" class="form-control" id="password"
+                        placeholder="Enter a password more than 6 characters">
                 </div>
                 <div class="logInContainer">
                     <button type="submit" id="submit">Sign Up</button>
                 </div>
                 <div class="signUpContainer">
                     <small id="signupPage" class="form-text text-muted">Already have an account?<a href="login.html">
-                        Log in.</a></small>
+                            Log in.</a></small>
                 </div>
             </form>
         </div>
-        <div class="headingsContainer">Get cheaper books from your fellow post-secondary peers on BookFinder.</div>
-        <div class="allDescriptionContainer">
-            <div class="descriptionContainer firstContainer">
-                <div class="descriptionPicture"><i class="fas fa-book"></i></div>
-                <div class="descriptionText">
-                    <span id="bold">Get updates on the cheapest books</span><span id="light"> for your classes.</span>
-                </div>
-            </div>
-            <div class="descriptionContainer">
-                <div class="descriptionPicture"><i class="fas fa-wallet"></i></div>
-                <div class="descriptionText">
-                    <span id="bold">Sell textbooks easily</span><span id="light"> once you're done with them.</span>
-                </div>
-            </div>
-            <div class="descriptionContainer lastContainer">
-                <div class="descriptionPicture"><i class="fas fa-truck"></i></div>
-                <div class="descriptionText">
-                    <span id="bold">Get textbooks delivered </span><span id="light"> to you for cheap.</span>
-                </div>
-            </div>
-        </div>
+        <div id="appInfoPlaceholder"></div>
+        <script src="scripts/general.js"></script>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="scripts/signup.js"></script>

@@ -2,12 +2,19 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
     <title>Chat List</title>
 
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Control of cache errors -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
+
+    <!-- Control of expiry date -->
     <meta http-equiv="Expires" content="0">
+
+    <!-- Suppresses security issues -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- FireBase Scripts -->
@@ -30,66 +37,11 @@
 
 <body>
 
-    <div class="topbar">
-        <span class="logo">BOOKFINDER</span>
-        <label class="search" for="inpt_search">
-            <input id="inpt_search" type="text" placeholder="Not yet implemented..." />
-        </label>
-    </div>
-
+    <div id="topBarPlaceholder"></div>
     <!-- Page Content -->
     <div class="content">
         <span>&nbsp;&nbsp;Messages</span>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container firstContainer">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
         <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
-            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
-            <div class="chatDescription">
-                <div class="chatName">j.enh</div>
-                <div class="chatText">Around 5pm</div>
-            </div>
-        </div>
-        <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container lastContainer">
             <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
             <div class="chatDescription">
                 <div class="chatName">j.enh</div>
@@ -98,17 +50,15 @@
         </div>
     </div>
     <!-- /.content -->
+    <div id="navBarPlaceholder"></div>
 
-    <div class="navbar">
-        <a href="main.html"><i class="fas fa-home"></i></a>
-        <a href="sell.html"><i class="fas fa-hand-holding-usd"></i></a>
-        <a href="profile.html"><i class="fas fa-user"></i></a>
-        <a href="chatlist.html"><i class="fas fa-comment"></i></a>
-        <a href="settings.html"><i class="fas fa-cog"></i></a>
-    </div>
+    <!-- Loads general HTML files to avoid code repetition -->
+    <script src="scripts/general.js"></script>
 
-    <!-- Javascript references -->
+    <!-- Firebase authentification -->
     <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+
+    <!-- Search bar -->
     <script type="text/javascript" src="scripts/search-widget.js"></script>
 </body>
 

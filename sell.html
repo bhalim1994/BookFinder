@@ -5,9 +5,17 @@
     <meta charset="utf-8">
     <title>Sell Page</title>
 
+    <!-- Charset -->
+    <meta charset="utf-8">
+
+    <!-- Control of cache errors -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
+
+    <!-- Control of expiry date -->
     <meta http-equiv="Expires" content="0">
+
+    <!-- Suppresses security issues -->
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <!-- Firebase Scripts -->
@@ -34,12 +42,7 @@
 
 <body>
 
-    <div class="topbar">
-        <span class="logo">BOOKFINDER</span>
-        <label class="search" for="inpt_search">
-            <input id="inpt_search" type="text" placeholder="Not yet implemented..." />
-        </label>
-    </div>
+    <div id="topBarPlaceholder"></div>
 
     <!-- Page Content -->
     <div class="content">
@@ -62,16 +65,15 @@
     </div>
     <!-- /.content -->
 
-    <div class="navbar">
-        <a href="main.html"><i class="fas fa-home"></i></a>
-        <a href="sell.html"><i class="fas fa-hand-holding-usd"></i></a>
-        <a href="profile.html"><i class="fas fa-user"></i></a>
-        <a href="chatlist.html"><i class="fas fa-comment"></i></a>
-        <a href="settings.html"><i class="fas fa-cog"></i></a>
-    </div>
+    <div id="navBarPlaceholder"></div>
 
-    <!-- Javascript for search bar and authentification -->
+    <!-- Loads general HTML files to avoid code repetition -->
+    <script src="scripts/general.js"></script>
+
+    <!-- Firebase authentification -->
     <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+
+    <!-- Search bar -->
     <script type="text/javascript" src="scripts/search-widget.js"></script>
 
     <!-- Javascript for profile update -->
