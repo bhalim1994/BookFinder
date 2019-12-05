@@ -48,10 +48,6 @@ function createPost(title, price, imgCount, gsReference, id){
     boxIn.style.paddingBottom = "0";
     boxIn.style.marginBottom = "0";
 
-    var a = document.createElement("a");
-    console.log(id);
-    a.href = "#";
-
     //getting images
     var img = document.createElement("IMG");
     img.id = id; 
@@ -98,26 +94,11 @@ function createPost(title, price, imgCount, gsReference, id){
     
     container.appendChild(boxOut);
     boxOut.appendChild(boxIn);
-    boxIn.appendChild(a);
-    a.appendChild(img);
+    boxIn.appendChild(img);
     boxOut.appendChild(boxPrice);
     boxPrice.appendChild(priceC);
     boxOut.appendChild(descriptionBox);
     descriptionBox.appendChild(descriptionBoxText);
-    
-    
-
-    $("#container").unbind().on("click", function(event) {
-        openPage(event.target.id)
-    });
-}
-
-
-//Opens the post that was clicked
-function openPage(id){
-    localStorage.setItem("postID",id);
-    window.location.href = "./post-page.html";
-
 }
 
 
