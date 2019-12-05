@@ -3,6 +3,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 	if (user) {
 
 		console.log("user is logged in");
+		window.location.href = "./main.html";
 
 	} else {
 		// User is signed out.
@@ -36,7 +37,8 @@ $("#submit").closest('form').on('submit', function (event) {
 				LastName: userLastName,
 				PhoneNumber: "",
 				University: userUniversity,
-				UserName: ""
+				UserName: "",
+				profilePicture: ""
 
 			});
 			console.log("user is logged in");

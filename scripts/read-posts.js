@@ -2,6 +2,7 @@
 var storage = firebase.storage();
 console.log("Getting Posts");
 var docRef = database.collection("GlobalPosts");
+
 docRef.onSnapshot(function (querySnapshot) {
     querySnapshot.forEach(function (doc) {
         if (doc) {
@@ -12,7 +13,7 @@ docRef.onSnapshot(function (querySnapshot) {
 
             createPost(doc.data().Title,
                 doc.data().Price,
-                doc.data().imgCount,
+                doc.data().imageURL,
                 gsReference,
                 doc.id);
         }
@@ -29,7 +30,7 @@ container.style.marginTop = "15%";
 container.style.marginBottom = "15%";
 
 
-function createPost(title, price, imgCount, gsReference, id) {
+function createPost(title, price, imageURL, gsReference, id) {
     //Outer box
     var boxOut = document.createElement("div");
     boxOut.style.width = "100%";
@@ -52,18 +53,7 @@ function createPost(title, price, imgCount, gsReference, id) {
     //Getting images
     var img = document.createElement("IMG");
     img.id = id;
-    gsReference.child("1.jpeg").getDownloadURL().then(onResolve, onReject);
-    gsReference.child("1.png").getDownloadURL().then(onResolve, onReject);
-    gsReference.child("1.jpg").getDownloadURL().then(onResolve, onReject);
-
-    //When URL is found, set it to image
-    function onResolve(foundURL) {
-        img.src = foundURL;
-    }
-
-    function onReject(error) {
-        console.log("Ignore this please :)");
-    }
+    img.src = imageURL;
 
     //Image styling
     img.style.width = "100%";
