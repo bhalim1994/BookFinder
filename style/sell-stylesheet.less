@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
+
+html,
+body {
+    background-color: white;
+    padding: 0;
+    margin: auto;
+    float: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label {
+    color: #979797;
+    font-size: 9pt;
+    font-family: 'Roboto';
+    margin-left: 5px;
+}
+
+.topBuffer {
+    margin-top: 69px;
+}
+
+.input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid #979797;
+    width: 99%;
+    margin-top: 10px;
+    margin-left: 4px;
+    margin-bottom: 15px;
+}
+
+.descriptionInput {
+    margin-bottom: 60px;
+}
+
+.row {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+}
+
+.imagePreview {
+    width: 100%;
+    height: 250px;
+    background-position: center center;
+    background: url(../images/no-images-found.jpg);
+    background-color: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    box-shadow: 0px -3px 6px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-primary {
+    display: block;
+    border-radius: 0px;
+    box-shadow: 0px 4px 6px 2px rgba(0, 0, 0, 0.2);
+    margin-top: -5px;
+    background-color: #283593;
+}
+
+.imgUp {
+    margin-bottom: 15px;
+    width: 250px;
+}
+
+.uploadFile {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+button[type="submit"] {
+    width: 150px;
+    height: 40px;
+    border: 0.5px solid black;
+    background-color: #283593;
+    margin-top: 40px;
+    color: white;
+    font-family: 'Roboto';
+    transition: all 200ms ease;
+    border-radius: 2px;
+}
+
+button[type="submit"]:hover {
+    cursor: pointer;
+    color: #283593;
+    background-color: white;
+    transition: all 150ms ease;
+}
+
+.inputLast {
+    margin-bottom: 95px;
+}
+
+.topbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 0.5px 3px #888888;
+    background-color: #283593;
+    padding-bottom: 18px;
+    z-index: 2;
+    margin: auto;
+}
+
+.logo {
+    padding: 20px 0px 0px 15px;
+    float: left;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+    color: white;
+}
+
+.navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    border-width: 1px;
+    background-color: white;
+    box-shadow: 0px -0.5px 3px #888888;
+    z-index: 2;
+    margin: auto;
+}
+
+.navbar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 20px 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 28px;
+}
+
+.navbar a:hover {
+    color: #283593;
+}
+
+.navbar .fa-hand-holding-usd {
+    color: #283593;
+}
+
+.search {
+    float: right;
+    color: white;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    box-sizing: border-box;
+    margin: 10px 30px 7px 0px;
+    padding: 7px 9px 0px 9px;
+    border: 1.5px solid #FFFFFF;
+    border-radius: 50%;
+    transition: all 150ms ease;
+    cursor: text;
+
+    &:after {
+        content: "";
+        position: absolute;
+        width: 1.5px;
+        height: 20px;
+        right: -5px;
+        top: 13px;
+        background: #FFFFFF;
+        border-radius: 3px;
+        transform: rotate(-45deg);
+        transition: all 150ms ease;
+    }
+
+    &.active,
+    &:focus {
+        width: 300px;
+        height: 35px;
+        border-radius: 25px;
+        margin-right: 10px;
+        margin-top: 12px;
+        margin-bottom: 0px;
+
+        &:after {
+            height: 0px;
+        }
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        box-sizing: border-box;
+        font-family: 'Roboto';
+        font-size: 15px;
+        color: inherit;
+        background: transparent;
+        outline-width: 0px;
+    }
+}
+
+.search input::placeholder {
+    font-weight: lighter;
+    color: #e0e0e0;
+    opacity: 50%;
+}

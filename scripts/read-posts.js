@@ -21,6 +21,7 @@ docRef.onSnapshot(function(querySnapshot){
  
 //Body
 var body = document.getElementsByTagName("body");
+
 //Main container
 var container = document.getElementById("container");
 container.style.marginTop = "15%";
@@ -115,7 +116,7 @@ function createPost(title, price, imgCount, gsReference, id){
 //Opens the post that was clicked
 function openPage(id){
     localStorage.setItem("postID",id);
-    window.location.href = "./postPage.html";
+    window.location.href = "./post-page.html";
 
 }
 
