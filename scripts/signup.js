@@ -1,4 +1,4 @@
-//Authentication state observer
+//Authentication state observer.
 firebase.auth().onAuthStateChanged(function (user) {
 	if (user) {
 
@@ -7,12 +7,12 @@ firebase.auth().onAuthStateChanged(function (user) {
 	} else {
 		// User is signed out.
 		console.log("user is logged out");
-		// Do nothing
+		// Do nothing.
 
 	}
 });
 
-//Sign Up button clicked
+//Sign Up button clicked.
 $("#submit").closest('form').on('submit', function (event) {
 	event.preventDefault();
 	var userEmail = document.getElementById("email").value;
@@ -22,14 +22,14 @@ $("#submit").closest('form').on('submit', function (event) {
 	var userUniversity = document.getElementById("university").value;
 
 
-	// Create User
+	// Create user.
 	firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword);
 
-	//Authentication state observer
+	//Authentication state observer.
 	firebase.auth().onAuthStateChanged(function (user) {
 		if (user) {
 			// User is signed in.
-			// Add user Profile to database
+			// Add user Profile to database.
 			database.collection("Users").doc(user.uid).set({
 				Email: user.email,
 				FirstName: userFirstName,
@@ -49,7 +49,7 @@ $("#submit").closest('form').on('submit', function (event) {
 						window.location.href = "./main.html";
 					}
 				} else {
-					// doc.data() will be undefined in this case
+					// doc.data() will be undefined in this case.
 					console.log("No such document!");
 				}
 			}).catch(function (error) {
