@@ -1,26 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap');
 
-/* Window size is 500 x 708 */
-
 html,
 body {
     background-color: white;
     padding: 0;
     margin: auto;
-    max-width: 500px;
-    float: center;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
 }
 
 .chat {
-    width: 500px;
-    height: 100vh;
+    height: 100%;
+    width: 100%;
     background: white;
     box-shadow:0 0 30px -5px grey;
     position: absolute;
@@ -75,7 +64,7 @@ body {
     background: white;
 }
 
-.chat_text {
+.chatText {
     width: calc(85% - 10px);
     padding: 10px;
     box-sizing: border-box;
@@ -119,7 +108,8 @@ body {
 .chat_bubble-2 {
     border: 1px solid #283593;
     border-radius: 12px 12px 0 12px;
-    margin-left: 250px;
+    margin-left: auto;
+    margin-right: 15px;
 }
 
 .chat_s {

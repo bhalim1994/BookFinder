@@ -34,7 +34,6 @@ $("#submit").closest('form').on('submit', function (event) {
 				Email: user.email,
 				FirstName: userFirstName,
 				LastName: userLastName,
-				Major: "",
 				PhoneNumber: "",
 				University: userUniversity,
 				UserName: ""

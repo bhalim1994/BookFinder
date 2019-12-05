@@ -7,7 +7,6 @@ body {
     background-color: white;
     padding: 0;
     margin: auto;
-    max-width: 500px;
     float: center;
 }
 
@@ -27,7 +26,6 @@ body {
     background-color: #283593;
     padding-bottom: 18px;
     z-index: 2;
-    max-width: 500px;
     margin: auto;
 }
 
@@ -71,6 +69,39 @@ body {
     transition: all 150ms ease;
 }
 
+.notImplemented span {
+    color: #979797;
+}
+
+.notifText span:after {
+    content: 'Notifications';
+}
+
+.privacyText span:after {
+    content: 'Privacy';
+}
+
+.securityText span:after {
+    content: 'Security';
+}
+
+.helpText span:after {
+    content: 'Help';
+}
+
+.aboutText span:after {
+    content: 'About';
+}
+
+.notImplemented:hover span:after {
+    content: 'Not yet implemented...';
+}
+
+.notifContainer span {
+    position: relative;
+    content: 'Notifications'
+}
+
 .container:not(:hover) .icon {
     transition: all 150ms ease;
 }
@@ -84,7 +115,6 @@ body {
     background-color: white;
     box-shadow: 0px -0.5px 3px #888888;
     z-index: 2;
-    max-width: 500px;
     margin: auto;
 }
 
@@ -92,7 +122,7 @@ body {
     float: left;
     width: 20%;
     text-align: center;
-    padding: 2.5% 0;
+    padding: 20px 0;
     transition: all 0.3s ease;
     color: black;
     font-size: 28px;
