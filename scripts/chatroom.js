@@ -3,6 +3,7 @@ function add() {
         document.getElementsByClassName('chatText')[0].value + '</div>';
 }
 
-var clear = function() {
-    document.getElementsByClassName('chatText')[0].value = '';
+window.onload = function clear () {
+    var clear =
+        document.getElementsByClassName('chatText').value = '';
 }
