@@ -40,7 +40,13 @@
 
 <body>
 
-    <div id="topBarPlaceholder"></div>
+    <!-- Top bar -->
+    <div class="topbar">
+        <span class="logo">BOOKFINDER</span>
+        <label class="search" for="inpt_search">
+            <input id="inpt_search" type="text" placeholder="Not yet implemented..." />
+        </label>
+    </div>
 
     <!-- Page Content -->
     <div class="content">
@@ -53,7 +59,7 @@
             <div class="changeProfilePhoto center">
                 <label>
                     Change Profile Photo
-                    <input type="file" class="uploadProfile img" value="Upload Profile Photo">
+                    <input type="file" class="uploadProfile img" value="Upload Profile Photo" />
                 </label>
             </div>
             <div class="firstName label">First Name</div>
@@ -76,7 +82,7 @@
                     <option value="Simon Fraser University">Simon Fraser University</option>
                 </select>
             </div>
-            <div><button id="submit" class="inputLast center" type="submit">Submit</div>
+            <div><button id="submit" class="center" type="submit">Submit</div>
         </form>
         <div class="bottomBuffer"></div>
     </div>

@@ -32,10 +32,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- Less Script & Stylesheet for Specific Page -->
-    <link rel="stylesheet/less" type="text/css" href="style/sell-stylesheet.less" />
     <!-- Less Script & Stylesheet for General Styling -->
     <link rel="stylesheet/less" type="text/css" href="style/general-stylesheet.less" />
+    <!-- Less Script & Stylesheet for Specific Page -->
+    <link rel="stylesheet/less" type="text/css" href="style/sell-stylesheet.less" />
     <!-- Import less -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
@@ -45,7 +45,13 @@
 
 <body>
 
-    <div id="topBarPlaceholder"></div>
+    <!-- Top bar -->
+    <div class="topbar">
+        <span class="logo">BOOKFINDER</span>
+        <label class="search" for="inpt_search">
+            <input id="inpt_search" type="text" placeholder="Not yet implemented..." />
+        </label>
+    </div>
 
     <!-- Page Content -->
     <div class="content">
@@ -63,7 +69,7 @@
                     </label>
                 </div>
             </div>
-            <div><button id="submit" class="inputLast center" type="submit">Post</div>
+            <div><button id="submit" class="center" type="submit">Post</div>
         </form>
         <div class="bottomBuffer"></div>
     </div>
