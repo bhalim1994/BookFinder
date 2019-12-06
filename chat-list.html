@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Chat List</title>
+
+    <!-- Charset -->
+    <meta charset="utf-8">
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Control of cache errors -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <!-- Control of expiry date -->
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Suppresses security issues -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    <!-- FireBase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-messaging.js"></script>
+    <script src="scripts/firebase-config.js"></script>
+
+    <!-- Icon Scripts -->
+    <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
+
+    <!-- Less Script & Stylesheet for Specific Page -->
+    <link rel="stylesheet/less" type="text/css" href="style/chat-list-stylesheet.less" />
+    <!-- Less Script & Stylesheet for General Styling -->
+    <link rel="stylesheet/less" type="text/css" href="style/general-stylesheet.less" />
+    <!-- Import less -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+    <!-- Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Top bar -->
+    <div id="topBarPlaceholder"></div>
+
+    <!-- Page Content -->
+    <div class="content">
+        <!-- Top buffer so top bar doesn't overlap with content -->
+        <div id="topBuffer"></div>
+        <!-- Messages heading -->
+        <span>&nbsp;&nbsp;Messages</span>
+
+        <!-- One chat listing -->
+        <div onclick="window.location.href = 'chat-room.html'" class="chatContainer container">
+            <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <div class="chatDescription">
+                <div class="chatName">j.enh</div>
+                <div class="chatText">Around 5pm</div>
+            </div>
+        </div>
+
+        <!-- Bottom buffer so nav bar doesn't overlap with content -->
+        <div id="bottomBuffer"></div>
+    </div>
+    <!-- /.content -->
+
+    <!-- Placeholder for navigation bar -->
+    <div id="navBarPlaceholder"></div>
+
+    <!-- Loads general HTML files to avoid code repetition -->
+    <script src="scripts/general.js"></script>
+
+    <!-- Firebase authentification -->
+    <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+
+    <!-- Search bar -->
+    <script type="text/javascript" src="scripts/search-widget.js"></script>
+</body>
+
+</html>
