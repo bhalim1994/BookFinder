@@ -22,6 +22,18 @@ $("#submit").closest('form').on('submit', function (event) {
 	var userLastName = document.getElementById("lastName").value;
 	var userUniversity = document.getElementById("university").value;
 
+	// University Email Checker
+	if(userEmail.substring(userUniversity.length - 13 ,userUniversity.length).toLowerCase() != "my.bcit.ca"){
+		if(userEmail.substring(userUniversity.length - 10 ,userUniversity.length).toLowerCase() != "sfu.ca"){
+			if(userEmail.substring(userUniversity.length - 15 ,userUniversity.length).toLowerCase() != "alumni.ubc.ca"){
+				alert("Not a registered University Email." + 
+						"\nPlease enter your school Email.\n" +
+						"Current registered addresses are:\n\nmy.bcit.ca\nsfu.ca\nalumni.ubc.ca");
+				return;
+			}
+		}
+		
+	}
 
 	// Create user.
 	firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword);

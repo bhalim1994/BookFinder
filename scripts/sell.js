@@ -45,7 +45,16 @@ $("#submit").closest('form').on('submit', function (event) {
         alert("No image.");
 
     } else { // Start post Upload
-        var user = firebase.auth().currentUser;
+
+        var userUID;
+        firebase.auth().onAuthStateChanged(function(user) {
+            if (user) {
+                // User is signed in.
+                userUID = user.uid;
+            } else {
+                // No user is signed in.
+            }
+        });
 
         // Add a new document with a generated id.
         database.collection("GlobalPosts").add({
@@ -54,7 +63,7 @@ $("#submit").closest('form').on('submit', function (event) {
             University: university,
             description: description,
             imageURL: "",
-            //PostOwner: user.id,
+            PostOwner: userUID,
 
         })
         .then(function(docRef) {
