@@ -6,6 +6,7 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <!-- Control of cache errors -->
@@ -37,19 +38,29 @@
 </head>
 
 <body>
+    <!-- Content container -->
     <div id="content">
+        <!-- Logo -->
         <div id="logo">
             <p>BOOKFINDER</p>
         </div>
-        <div class="signUpContainer">
+        <!-- Sign up form container  -->
+        <div id="signUpContainer">
+            <!-- Sign up form -->
             <form>
-                <div class="firstNameContainer">
+                <!-- First name container -->
+                <div id="firstNameContainer">
+                    <!-- First name input -->
                     <input type="text" class="form-control" id="firstName" placeholder="First Name">
                 </div>
-                <div class="lastNameContainer">
+                <!-- Last name container -->
+                <div id="lastNameContainer">
+                    <!-- Last name input -->
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name">
                 </div>
-                <div class="universityContainer">
+                <!-- University container -->
+                <div id="universityContainer">
+                    <!-- University input (Preselected options) -->
                     <select id="university">
                         <option selected>Choose a university</option>
                         <option value="British Columbia Institute of Technology">British Columbia Institute of
@@ -58,25 +69,38 @@
                         <option value="Simon Fraser University">Simon Fraser University</option>
                     </select>
                 </div>
-                <div class="emailContainer">
+                <!-- Email container -->
+                <div id="emailContainer">
+                    <!-- Email input -->
                     <input type="email" class="form-control" id="email" placeholder="Enter email">
                 </div>
-                <div class="passwordContainer">
+                <!-- Password container -->
+                <div id="passwordContainer">
+                    <!-- Password input -->
                     <input type="password" class="form-control" id="password"
                         placeholder="Enter a password more than 6 characters">
                 </div>
-                <div class="logInContainer">
+                <!-- Sign up container -->
+                <div id="signUpButtonContainer">
+                    <!-- Sign up button -->
                     <button type="submit" id="submit">Sign Up</button>
                 </div>
-                <div class="signUpContainer">
+                <!-- Log in text container -->
+                <div id="logInContainer">
                     <p id="logInPage" class="form-text text-muted">Already have an account?<a href="login.html">
                             Log in.</a></p>
                 </div>
             </form>
         </div>
+
+        <!-- App information placeholder -->
         <div id="appInfoPlaceholder"></div>
+
+        <!-- To load general elements -->
         <script src="scripts/general.js"></script>
     </div>
+
+    <!-- Sign up script -->
     <script src="scripts/signup.js"></script>
 </body>
 

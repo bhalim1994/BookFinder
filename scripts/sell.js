@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 //Upload the file fo preview
 $(function () {
-    $(document).on("change", ".uploadFile", function () {
+    $(document).on("change", "#uploadFile", function () {
         var uploadFile = $(this);
         var files = !!this.files ? this.files : [];
         //Makes sure a file is selected and that it's valid
@@ -26,7 +26,7 @@ $(function () {
             //Sets the image as the background
             reader.onloadend = function () {
                 imageURL = files[0];
-                uploadFile.closest(".imgUp").find('.imagePreview').css("background-image", "url(" + this.result + ")");
+                uploadFile.closest("#imgUp").find('#imagePreview').css("background-image", "url(" + this.result + ")");
             }
         }
 

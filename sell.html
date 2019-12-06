@@ -6,6 +6,7 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Control of cache errors -->
@@ -51,40 +52,62 @@
 
     <!-- Page Content -->
     <div id="content">
+        <!-- Buffer so content doesn't overlap with top bar -->
         <div id="topBuffer"></div>
+
+        <!-- Form for posting a textbook -->
         <form>
-            <div class="name label">Textbook Name</div>
-            <div><input id="name" class="nameInput input" type="text" /></div>
-            <div class="price label">Price</div>
-            <div><input id="price" class="priceInput input" type="number" /></div>
-            <div class="university label">University</div>
+            <!-- Label for textbook name -->
+            <div id="nameLabel" class="label">Textbook Name</div>
+            <!-- Input for textbook name -->
+            <div><input id="name" class="input" type="text" /></div>
+            <!-- Label for textbook price -->
+            <div id="priceLabel" class="label">Price</div>
+            <!-- Input for textbook price -->
+            <div><input id="price" class="input" type="number" /></div>
+            <!-- Label for Universty name -->
+            <div id="universityLabel" class="label">University</div>
             <div>
-                <select class="universityInput" id="university">
+                <!-- Input for university name (predetermined options) -->
+                <select id="university">
                     <option value="British Columbia Institute of Technology">British Columbia Institute of Technology
                     </option>
                     <option value="University of British Columbia">University of British Columbia</option>
                     <option value="Simon Fraser University">Simon Fraser University</option>
                 </select>
             </div>
-            <div class="university label">Description</div>
-            <div class="descriptionContainer">
-                <textarea id="description" class="descriptionInput" rows="4" cols="50"></textarea>
+            <!-- Label of description box -->
+            <div id="descriptionLabel" class="label">Description</div>
+            <!-- Description container -->
+            <div id="descriptionLabelContainer">
+                <!-- Description text area input -->
+                <textarea id="description" rows="4" cols="50"></textarea>
             </div>
+            <!-- Row for image preview -->
             <div class="row">
-                <div class="col-sm-2 imgUp">
-                    <div class="imagePreview"></div>
+                <!-- Image placeholder -->
+                <div class="col-sm-2" id="imgUp">
+                    <!-- Image preview -->
+                    <div id="imagePreview"></div>
+                    <!-- Primary button for upload -->
                     <label class="btn btn-primary">
-                        Upload<input type="file" class="uploadFile img" value="Upload Photo" id="image">
+                        Upload
+                        <!-- Upload a photo -->
+                        <input type="file" id="uploadFile" class="img" value="Upload Photo" id="image">
                     </label>
                 </div>
             </div>
 
+            <!-- Post textbook button -->
             <div><button id="submit" class="center" type="submit">Post</div>
         </form>
+
+        <!-- Buffer so content doesn't overlap with navigation bar -->
         <div id="bottomBuffer"></div>
     </div>
     <!-- /.content -->
 
+    <!-- Navigation bar placeholder -->
     <div id="navBarPlaceholder"></div>
 
     <!-- Loads general HTML files to avoid code repetition -->

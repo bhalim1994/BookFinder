@@ -37,32 +37,46 @@
 </head>
 
 <body>
+    <!-- Page content -->
     <div id="content">
+        <!-- BookFinder logo -->
         <div id="logo">
             <p>BOOKFINDER</p>
         </div>
-        <div class="logInContainer">
+        <!-- Container for log in form -->
+        <div id="logInContainer">
             <form>
-                <div class="emailContainer">
+                <!-- Email container -->
+                <div id="emailContainer">
+                    <!-- Email input -->
                     <input type="email" class="form-control" id="email" placeholder="Enter email">
                 </div>
-                <div class="passwordContainer">
+                <!-- Password container -->
+                <div id="passwordContainer">
+                    <!-- Password input -->
                     <input type="password" class="form-control" id="password" placeholder="Password">
                 </div>
-                <div class="logInContainer">
+                <!-- Submit container -->
+                <div id="submitContainer">
+                    <!-- Submit button -->
                     <button type="submit" id="submit">Log In</button>
                 </div>
-                <div class="signUpContainer">
+                <!-- Sign up container -->
+                <div id="signUpContainer">
+                    <!-- Sign up link -->
                     <p id="signupPage" class="form-text text-muted">Dont have an account?<a href="signup.html">
                             Sign up.</a></p>
                 </div>
             </form>
         </div>
+        <!-- App information placeholder -->
         <div id="appInfoPlaceholder"></div>
+
+        <!-- Loads general elements -->
         <script src="scripts/general.js"></script>
     </div>
 
-
+    <!-- Login script -->
     <script src="scripts/login.js"></script>
 
 </body>

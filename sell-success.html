@@ -6,10 +6,12 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- redirect timer -->
+    <!-- Redirect timer -->
     <meta http-equiv="refresh" content="3;url=./main.html" />
+    
     <!-- Control of cache errors -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -41,15 +43,21 @@
 <body>
     <!-- Page Content -->
     <div id="content">
-        <div class="sellSuccessContainer">
-            <img class="sellSuccess center" src="images/checkmark.png"
+        <!-- Image container -->
+        <div id="sellSuccessContainer">
+            <!-- Checkmark image -->
+            <img id="sellSuccess" class="center" src="images/checkmark.png"
                 alt="Succesfully sold!" />
         </div>
-        <div class="descriptionContainer center">
-            <span class="mainText">Book Posted!</span>
+        <!-- Description container -->
+        <div id="descriptionContainer" class="center">
+            <!-- Main text -->
+            <span id="mainText">Book Posted!</span>
             <div>
-            <span class="subText">You will be automatically redirected in 3 seconds...</span>
-            <a class="redirectText" href="main.html">Click here if you are not.</a>
+                <!-- Sub text -->
+            <span id="subText">You will be automatically redirected in 3 seconds...</span>
+            <!-- Linked redirection text (in case they don't get atomatically redirected) -->
+            <a id="redirectText" href="main.html">Click here if you are not.</a>
             </div>
         </div>
     </div>

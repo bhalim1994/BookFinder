@@ -6,6 +6,8 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
+
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Control of cache errors -->
@@ -46,44 +48,65 @@
 
     <!-- Page Content -->
     <div id="content">
+        <!-- Buffer so content doesn't overlap with top bar -->
         <div id="topBuffer"></div>
-        <div class="profilePhotoContainer">
-            <img class="profilePhoto center" src="images/profile-photo-placeholder.png"
-                alt="Profile Photo Placeholder" />
+        <!-- Profile photo container-->
+        <div id="profilePhotoContainer">
+            <!-- Profile photo image file -->
+            <img id="profilePhoto center" src="images/profile-photo-placeholder.png" alt="Profile Photo Placeholder" />
         </div>
+
+        <!-- Your information form -->
         <form>
-            <div class="changeProfilePhoto center">
+            <!-- Change profile photo text container -->
+            <div id="changeProfilePhoto" class="center">
                 <label>
                     Change Profile Photo
-                    <input type="file" class="uploadProfile img" value="Upload Profile Photo" />
+                    <!-- Upload profile button -->
+                    <input type="file" id="uploadProfile" class="img" value="Upload Profile Photo" />
                 </label>
             </div>
-            <div class="firstName label">First Name</div>
-            <div><input id="first" class="firstNameInput input" type="text" /></div>
-            <div class="lastName label">Last Name</div>
-            <div><input id="last" class="lastNameInput input" type="text" /></div>
-            <div class="username label">Username</div>
-            <div><input id="username" class="usernameInput input" type="text" /></div>
-            <div class="email label">Email Address</div>
-            <div><input id="email" class="emailInput input" type="email" readonly /></div>
-            <div class="phoneNumber label">Phone Number</div>
-            <div><input id="phone" class="phoneNumberInput input" type="tel" name="phone"
-                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
-            <div class="university label">University</div>
+            <!-- First name label -->
+            <div id="firstNameLabel" class="label">First Name</div>
+            <!-- First name input field -->
+            <div><input id="first" class="input" type="text" /></div>
+            <!-- Last name label -->
+            <div id="lastNameLabel" class="label">Last Name</div>
+            <!-- Last name input field -->
+            <div><input id="last" class="input" type="text" /></div>
+            <!-- Username label -->
+            <div id="userNameLabel" class="label">Username</div>
+            <!-- Username input field -->
+            <div><input id="username" class="input" type="text" /></div>
+            <!-- Email label -->
+            <div id="emailLabel" class="label">Email Address</div>
+            <!-- Email input field, read only -->
+            <div><input id="email" class="input" type="email" readonly /></div>
+            <!-- Phone number label -->
+            <div id="phoneNumberLabel" class="label">Phone Number</div>
+            <!-- Phone number field -->
+            <div><input id="phone" class="input" type="tel" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" /></div>
+            <!-- University label -->
+            <div id="universityLabel" class="label">University</div>
+            <!-- University select field -->
             <div>
-                <select class="universityInput" id="university">
+                <select id="university">
                     <option value="British Columbia Institute of Technology">British Columbia Institute of Technology
                     </option>
                     <option value="University of British Columbia">University of British Columbia</option>
                     <option value="Simon Fraser University">Simon Fraser University</option>
                 </select>
             </div>
+            <!-- Submit button -->
             <div><button id="submit" class="center" type="submit">Submit</div>
         </form>
+
+        <!-- Buffer so content doesn't overlap with navigation bar -->
         <div id="bottomBuffer"></div>
     </div>
     <!-- /.content -->
 
+    <!-- Navigation bar placeholder -->
     <div id="navBarPlaceholder"></div>
 
     <!-- Loads general HTML files to avoid code repetition -->

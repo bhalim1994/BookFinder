@@ -1,8 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    
+    <title>Post a book</title>
+    
+    <!-- Charset -->
     <meta charset="UTF-8">
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IE Edge compatibility -->
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Control of cache errors -->
@@ -14,8 +21,6 @@
 
     <!-- Control of expiry date -->
     <meta http-equiv="Expires" content="0">
-
-    
 
     <!-- FireBase Scripts -->
     <script src="https://www.gstatic.com/firebasejs/7.4.0/firebase-app.js"></script>
@@ -34,31 +39,49 @@
     <!-- Import less -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
-    <title></title>
-
 </head>
+
 <body>
+    <!-- Container for everything -->
     <div id="container">
+        <!-- Banner container -->
         <div class="banner">
+            <!-- Title container -->
             <div id="title"></div>
         </div>
+        <!-- Main content container -->
         <div class="content">
+            <!-- Image container -->
             <div id="imageContainer">
+                <!-- Image file -->
                 <img id="image">
             </div>
+            <!-- Price -->
             <p id="price"></p>
+            <!-- Description header -->
             <p id="descriptionLab">Description</p>
+            <!-- Container for description text -->
             <div class="descriptionContainer">
-            <p id="description"></p>
+                <!-- Description itself -->
+                <p id="description"></p>
             </div>
         </div>
-
     </div>
 
+    <!-- Navigation bar for post page -->
     <div id="navigation">
-        <div class="navChild" id="back"><p >Back</p></div><div class="navChild"><p>Contact Seller</p></div>
+        <!-- Back button -->
+        <div class="navChild" id="back">
+            <p>Back</p>
+        </div>
+        <!-- Contact seller button (yet to be implemented) -->
+        <div class="navChild">
+            <p>Contact Seller</p>
+        </div>
     </div>
-    
+
+    <!-- Post page script -->
     <script src="./scripts/post-page.js"></script>
 </body>
+
 </html>

@@ -37,6 +37,7 @@
     <!-- Import jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <!-- Import chat room JS -->
     <script type="text/javascript" src="scripts/chat-room.js"></script>
 </head>
 
@@ -75,14 +76,16 @@
                 <input type="text" placeholder="Type here..." id="chatText"
                     onkeypress="if(event.keyCode === 13){add();clear();}">
                 <!-- Submit button -->
-                <button onclick="add();clear();" id="chatSubmit fa fa-send"></button>
+                <button onclick="add();clear();" id="chatSubmit" class="fa fa-send"></button>
             </div>
         </div>
     </div>
     <!-- /.content -->
 
-    <!-- Javascript references -->
+    <!-- Firebase authentification -->
     <script type="text/javascript" src="scripts/firebase-auth.js"></script>
+
+    <!-- Search bar -->
     <script type="text/javascript" src="scripts/search-widget.js"></script>
 </body>
 
