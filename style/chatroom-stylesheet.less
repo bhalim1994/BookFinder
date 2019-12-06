@@ -16,14 +16,22 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.chat_name {
+    font-size: 3vmax;
+}
+
 .chat_header {
     padding: 15px;
     border-bottom: 4px solid #283593;
     background: white;
     color: black;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
-.chat_arrow{
+.chat_arrow {
     float:left;
     margin-right: 15px;
     padding-right: 5px;
@@ -40,20 +48,20 @@ body {
 }
 
 .chat_arrow a {
-    font-size:30px;
+    font-size:6vmax;
     color:black;
 }
 
 .chat_status {
-    font-size: 11px;
+    font-size: 3vmax;
     margin: 4px 0 -4px;
 }
 
 .chat_avatar {
     float: right;
-    width: 42px;
+    width: 8vmax;
+    padding-right: 27px;
     border-radius: 50%;
-    margin-top: -3px;
 }
 
 .chat_input {
@@ -62,6 +70,7 @@ body {
     width: calc(100% - 8px);
     padding: 10px 4px 6px;
     background: white;
+    font-size: 3vmax;
 }
 
 .chatText {
@@ -71,6 +80,7 @@ body {
     margin: 0 5px 5px;
     vertical-align: top;
     font-family: 'Montserrat', sans-serif;
+    font-size: 3vmax;
 }
 
 .chat_submit {
@@ -85,6 +95,7 @@ body {
     color: #283593;
     border-radius: 0 8px 8px 0;
     transition: all .4s;
+    font-size: 3vmax;
 }
 
 .chat_submit:hover {
@@ -96,8 +107,8 @@ body {
 .chat_bubble-2 {
     padding: 10px;
     margin: 13px 17px;
-    width: 250px;
-    font-size: 14px;
+    width: 32vmax;
+    font-size: 2vmax;
 }
 
 .chat_bubble-1 {
@@ -113,8 +124,10 @@ body {
 }
 
 .chat_s {
-    min-height: 80.5%;
-    max-height: 80.5%;
+    height: 74%;
+    overflow: hidden;
     overflow-y: scroll;
-    padding: 15px 0 0;
+    bottom: 80px;
+    position: fixed;
+    width: 100%;
 }
