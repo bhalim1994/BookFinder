@@ -28,13 +28,33 @@
     <!-- Import jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
+    <!-- Less Script & Stylesheet for General Styling -->
+    <link rel="stylesheet/less" type="text/css" href="style/postPage-stylesheet.less" />
+
+    <!-- Import less -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
     <title></title>
 
 </head>
 <body>
     <div id="container">
-        <div></div>
+        <div class="banner">
+            <div id="title"></div>
+        </div>
+        <div class="content">
+            <div id="imageContainer">
+                <img id="image">
+            </div>
+            <p id="price"></p>
+            <p id="descriptionLab">Description</p>
+            <p id="description"></p>
+        </div>
 
+    </div>
+
+    <div id="navigation">
+        <div class="navChild"><p>Back</p></div><div class="navChild"><p>Contact Seller</p></div>
     </div>
     
     <script src="./scripts/postPage.js"></script>

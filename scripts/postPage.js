@@ -5,7 +5,7 @@ var docRef = database.collection("GlobalPosts").doc(postID);
 // Get the Document
 docRef.get().then(function(doc) {
     if (doc.exists) {
-        createPost(doc.data().Title, doc.data().Price, doc.data().Description, doc.data().imageURL);
+        createPost(doc.data().Title, doc.data().Price, doc.data().description, doc.data().imageURL);
 
     } else {
         // doc.data() will be undefined in this case
@@ -16,13 +16,13 @@ docRef.get().then(function(doc) {
 function createPost(title, price, description, url){
     // Set page title to post title
     document.title = title;
+    document.getElementById("title").innerHTML = title;
 
     var content = document.getElementById("container");
 
+
     //getting images
-    var img = document.createElement("IMG");
-    img.src = url;
-
-    content.appendChild(img);
-
+    document.getElementById("image").src = url;
+    document.getElementById("price").innerHTML = "$" + price;
+    document.getElementById("description").innerHTML = description;
 } 
