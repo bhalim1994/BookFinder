@@ -13,7 +13,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         if (doc.exists) {
             // User is found now get Posts from their Uni.
             var getPosts = database.collection("GlobalPosts");
-            // Gets the book postings.
+            // Gets the book postings. Query where() function.
             getPosts.where("University", "==", doc.data().University).get().then(function (querySnapshot) {
                 querySnapshot.forEach(function (post) {
                     // Make sure post exists.
