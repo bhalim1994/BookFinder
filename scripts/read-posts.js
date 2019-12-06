@@ -110,3 +110,13 @@ function createPost(title, price, imageURL, id) {
     boxOut.appendChild(descriptionBox);
     descriptionBox.appendChild(descriptionBoxText);
 }
+
+$("body").unbind().on("click", function(event) {
+    openPage(event.target.id)
+});
+
+//Opens On the post that was clicked
+function openPage(id){
+    localStorage.setItem("postID",id);
+    window.location.href = "./postPage.html";
+}
