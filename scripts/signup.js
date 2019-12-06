@@ -23,9 +23,11 @@ $("#submit").closest('form').on('submit', function (event) {
 	var userUniversity = document.getElementById("university").value;
 
 	// University Email Checker
-	if(userEmail.substring(userUniversity.length - 13 ,userUniversity.length).toLowerCase() != "my.bcit.ca"){
-		if(userEmail.substring(userUniversity.length - 10 ,userUniversity.length).toLowerCase() != "sfu.ca"){
-			if(userEmail.substring(userUniversity.length - 15 ,userUniversity.length).toLowerCase() != "alumni.ubc.ca"){
+	console.log(userEmail.substr(userUniversity.length - 10).toLowerCase());
+
+	if(userEmail.substr(userEmail.length - 10).toLowerCase() != "my.bcit.ca"){
+		if(userEmail.substr(userEmail.length - 6).toLowerCase() != "sfu.ca"){
+			if(userEmail.substr(userEmail.length - 13).toLowerCase() != "alumni.ubc.ca"){
 				alert("Not a registered University Email." + 
 						"\nPlease enter your school Email.\n" +
 						"Current registered addresses are:\n\nmy.bcit.ca\nsfu.ca\nalumni.ubc.ca");
@@ -54,22 +56,28 @@ $("#submit").closest('form').on('submit', function (event) {
 
 			});
 			console.log("user is logged in");
-
-			var docRef = database.collection("Users").doc(user.uid);
-			docRef.get().then(function (doc) {
-				if (doc.exists) {
-					console.log("Document data:", doc.data());
-					if (userFirstName == doc.data().FirstName) {
-						window.location.href = "./main.html";
+			user.sendEmailVerification().then(function() {
+				// Email sent.
+				var docRef = database.collection("Users").doc(user.uid);
+				docRef.get().then(function (doc) {
+					if (doc.exists) {
+						console.log("Document data:", doc.data());
+						if (userFirstName == doc.data().FirstName) {
+							window.location.href = "./main.html";
+						}
+					} else {
+						// doc.data() will be undefined in this case.
+						console.log("No such document!");
+						alert("Your Account was not Made");
 					}
-				} else {
-					// doc.data() will be undefined in this case.
-					console.log("No such document!");
-					alert("Your Account was not Made");
-				}
-			}).catch(function (error) {
-				console.log("Error getting document:", error);
-			});
+				}).catch(function (error) {
+					console.log("Error getting document:", error);
+				});
+			  }).catch(function(error) {
+				// An error happened.
+			  });
+
+
 		} else {
 			// User is signed out.
 			console.log("user is logged out");
