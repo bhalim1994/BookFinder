@@ -56,8 +56,12 @@ $("#submit").closest('form').on('submit', function (event) {
 
 			});
 			console.log("user is logged in");
+
+			//Send email verification to user's email
 			user.sendEmailVerification().then(function() {
 				// Email sent.
+
+				//Upload user data to database.
 				var docRef = database.collection("Users").doc(user.uid);
 				docRef.get().then(function (doc) {
 					if (doc.exists) {
