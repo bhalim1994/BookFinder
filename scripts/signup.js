@@ -53,6 +53,7 @@ $("#submit").closest('form').on('submit', function (event) {
 				} else {
 					// doc.data() will be undefined in this case.
 					console.log("No such document!");
+					alert("Your Account was not Made");
 				}
 			}).catch(function (error) {
 				console.log("Error getting document:", error);
