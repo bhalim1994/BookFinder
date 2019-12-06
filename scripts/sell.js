@@ -31,7 +31,7 @@ $("#submit").closest('form').on('submit', function (event) {
     var title = document.getElementById("name").value;
     var price = document.getElementById("price").value;
     var university = document.getElementById("university").value;
-    var description = "";
+    var description = document.getElementById("description").value;
     if(title == ""){
         alert("Title is Empty.");
 
@@ -52,6 +52,7 @@ $("#submit").closest('form').on('submit', function (event) {
             Title: title,
             Price: price,
             University: university,
+            description: description,
             imageURL: "",
             //PostOwner: user.id,
 
