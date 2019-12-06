@@ -60,7 +60,7 @@
                 </div>
             </div>
             <!-- Chat messages box -->
-            <div id="chatSent">
+            <div class="chatSent">
                 <!-- Chat bubbles -->
                 <div class="chatBubble1">Hi</div>
                 <div class="chatBubble1">Are you still selling the book?</div>
@@ -73,10 +73,10 @@
             <!-- Chat input container -->
             <div id="chatInput">
                 <!-- Chat input, adds to message box and clears when enter or button is clicked -->
-                <input type="text" placeholder="Type here..." id="chatText"
+                <input type="text" placeholder="Type here..." class="chatText"
                     onkeypress="if(event.keyCode === 13){add();clear();}">
                 <!-- Submit button -->
-                <button onclick="add();clear();" id="chatSubmit" class="fa fa-send"></button>
+                <button onclick="add();clear();" class="chatSubmit fa fa-send"></button>
             </div>
         </div>
     </div>
