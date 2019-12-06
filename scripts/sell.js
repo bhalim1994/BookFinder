@@ -1,7 +1,7 @@
-//Stores the URL of the uploaded image
+// Stores the URL of the uploaded image.
 var imageURL;
 
-//Upload the file fo preview
+// Upload the file fo preview.
 $(function () {
     $(document).on("change", "#uploadFile", function () {
         var uploadFile = $(this);
@@ -25,10 +25,11 @@ $(function () {
     });
 });
 
-//Post button clicked
+// Post button clicked.
 $("#submit").closest('form').on('submit', function (event) {
     event.preventDefault();
 
+    // Get the Users Data.
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
             // Checks if user is verified

@@ -1,15 +1,15 @@
-// Authentication state observer
+// Authentication state observer.
 firebase.auth().onAuthStateChanged(function (user) {
 	if (user) {
-		// User is signed in
+		// User is signed in.
 		console.log("User is logged in");
 
+		// Get User information.
 		var docRef = database.collection("Users").doc(user.uid);
 		docRef.get().then(function (doc) {
-			// Makes sure document exists
+			// Makes sure document exists.
 			if (doc.exists) {
-
-				// Reads the data required
+				// Reads the data required.
 				console.log("Document data:", doc.data());
 				document.getElementById("first").value = doc.data().FirstName;
 				document.getElementById("last").value = doc.data().LastName;
@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 				document.getElementById("university").value = doc.data().University;
 				document.getElementById("phone").value = doc.data().PhoneNumber;
 			} else {
-				// doc.data() will be undefined in this case
+				// doc.data() will be undefined in this case.
 				console.log("No such document!");
 			}
 		}).catch(function (error) {
@@ -34,9 +34,11 @@ firebase.auth().onAuthStateChanged(function (user) {
 	}
 });
 
-// Submit Button clicked
+// Submit Button clicked.
 $("#submit").closest("form").on("submit", function (event) {
 	event.preventDefault();
+
+	// Getting all the values.
 	var first = document.getElementById("first").value;
 	var last = document.getElementById("last").value;
 	var username = document.getElementById("username").value;
@@ -45,7 +47,7 @@ $("#submit").closest("form").on("submit", function (event) {
 
 	var user = firebase.auth().currentUser;
 
-	// Add user Profile to database
+	// Add user Profile to database.
 	database.collection("Users").doc(user.uid).update({
 			FirstName: first,
 			LastName: last,

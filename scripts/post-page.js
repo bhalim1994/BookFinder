@@ -1,30 +1,35 @@
-// Set variables
+// Set variables.
 var postID = localStorage.getItem("postID")
 var storage = firebase.storage();
 var docRef = database.collection("GlobalPosts").doc(postID);
 
-// Get the document
+// Get the document.
 docRef.get().then(function(doc) {
-    //Make sure document exists
+    // Make sure document exists.
+
     if (doc.exists) {
+        // Create the post on the main page.
         createPost(doc.data().Title, doc.data().Price, doc.data().description, doc.data().imageURL);
 
     } else {
-        // doc.data() will be undefined in this case
+        // doc.data() will be undefined in this case.
         console.log("No such document!");
     }
 });
 
-// Creates the book postings
+// Creates the book postings.
 function createPost(title, price, description, url){
     // Set page title to post title
     document.title = title;
+
+    // Book title header.
     document.getElementById("title").innerHTML = title;
-    // Gets container to post it in
+
+    // Gets container to post it in.
     var content = document.getElementById("container");
 
 
-    // Getting images
+    // Getting images and setting text.
     document.getElementById("image").src = url;
     document.getElementById("price").innerHTML = "$" + price;
     document.getElementById("description").innerHTML = description;

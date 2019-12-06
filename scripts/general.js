@@ -1,9 +1,9 @@
-//Load general entities
+// Load general entities.
 $(function () {
-    //App information on login & signup page
+    // App information on login & signup page.
     $("#appInfoPlaceholder").load("app-info.html");
-    //Navigation bar
+    // Navigation bar.
     $("#navBarPlaceholder").load("nav-bar.html");
-    //Top bar
+    // Top bar.
     $("#topBarPlaceholder").load("top-bar.html");
 });

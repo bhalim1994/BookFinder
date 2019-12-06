@@ -1,13 +1,15 @@
-//Authentication state observer
+// Authentication state observer.
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       // User is signed in.
       console.log("user is logged in");
+
+      // Check if user if verified.
       if(user.emailVerified === true){
-        	// Add user Profile to database
+        	// if verified, set users verification to true.
 	        database.collection("Users").doc(user.uid).update({
               isVerified: true,
-              //Show profile updated
+
           }).then(function () {
                 console.log("user is verified");
 
@@ -20,7 +22,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   } else {
     // User is signed out.
     console.log("user is logged out");
+    // Go to login page
     window.location.href = "./login.html";
-    // Do nothing
   }
 });

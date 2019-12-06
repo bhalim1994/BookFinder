@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Web app's Firebase configuration.
 var firebaseConfig = {
     apiKey: "AIzaSyA0aEEKjsAIO88GyL7wJ8OQX_h2kWVwb40",
     authDomain: "bookfinder-2b31b.firebaseapp.com",
@@ -9,7 +9,7 @@ var firebaseConfig = {
     appId: "1:599245595354:web:185776ffe10c451c613be3"
 };
 
-//Initialize firebase config & database
+// Initialize firebase config & database.
 firebase.initializeApp(firebaseConfig);
 var database = firebase.firestore();
 
