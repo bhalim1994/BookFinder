@@ -3,35 +3,34 @@ var storage = firebase.storage();
 console.log("Getting Posts");
 
 
-// Get users University, then displays those posts which are in the same university
+// Get users university, then displays those posts which are in the same university
 firebase.auth().onAuthStateChanged(function (user) {
     var docRef = database.collection("Users").doc(user.uid);
-		docRef.get().then(function (doc) {
-			if (doc.exists) {
-                //User is found now get Posts from their Uni
-                var getPosts = database.collection("GlobalPosts");
-                getPosts.where("University", "==", doc.data().University).get().then(function (querySnapshot) {
-                    querySnapshot.forEach(function (post) {
-                        if (post) {
-                            console.log("post found");
-                            createPost(post.data().Title,
+    docRef.get().then(function (doc) {
+        // Make sure document exists
+        if (doc.exists) {
+            // User is found now get Posts from their Uni
+            var getPosts = database.collection("GlobalPosts");
+            // Gets the book postings
+            getPosts.where("University", "==", doc.data().University).get().then(function (querySnapshot) {
+                querySnapshot.forEach(function (post) {
+                    // Make sure post exists
+                    if (post) {
+                        console.log("post found");
+                        createPost(post.data().Title,
                             post.data().Price,
                             post.data().imageURL,
                             post.id);
-                        }
-                    })
-                });
-			} else {
-				console.log("No such document!");
-			}
-		}).catch(function (error) {
-			console.log("Error getting document:", error);
-		});
+                    }
+                })
+            });
+        } else {
+            console.log("No such document!");
+        }
+    }).catch(function (error) {
+        console.log("Error getting document:", error);
+    });
 });
-
-
-
-
 
 //Body
 var body = document.getElementsByTagName("body");
@@ -111,15 +110,16 @@ function createPost(title, price, imageURL, id) {
     descriptionBox.appendChild(descriptionBoxText);
 }
 
-$("body").unbind().on("click", 'img', function(event) {
+// Clicker for opening the description post
+$("body").unbind().on("click", 'img', function (event) {
     event.preventDefault();
     console.log(event);
     openPage(event.target.id);
-    
+
 });
 
-//Opens On the post that was clicked
-function openPage(id){
-    localStorage.setItem("postID",id);
+//Opens description the post that was clicked
+function openPage(id) {
+    localStorage.setItem("postID", id);
     window.location.href = "./post-page.html";
 }

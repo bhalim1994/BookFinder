@@ -1,12 +1,15 @@
 // Authentication state observer
 firebase.auth().onAuthStateChanged(function (user) {
 	if (user) {
-		// User is signed in.
+		// User is signed in
 		console.log("User is logged in");
 
 		var docRef = database.collection("Users").doc(user.uid);
 		docRef.get().then(function (doc) {
+			// Makes sure document exists
 			if (doc.exists) {
+
+				// Reads the data required
 				console.log("Document data:", doc.data());
 				document.getElementById("first").value = doc.data().FirstName;
 				document.getElementById("last").value = doc.data().LastName;
