@@ -111,8 +111,11 @@ function createPost(title, price, imageURL, id) {
     descriptionBox.appendChild(descriptionBoxText);
 }
 
-$("body").unbind().on("click", function(event) {
-    openPage(event.target.id)
+$("body").unbind().on("click", 'img', function(event) {
+    event.preventDefault();
+    console.log(event);
+    openPage(event.target.id);
+    
 });
 
 //Opens On the post that was clicked
