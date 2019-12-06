@@ -6,7 +6,8 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Control of cache errors -->
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
@@ -27,6 +28,9 @@
     <!-- Icon Scripts -->
     <script src="https://kit.fontawesome.com/c233e88540.js" crossorigin="anonymous"></script>
 
+    <!-- Import jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
     <!-- Less Script & Stylesheet -->
     <link rel="stylesheet/less" type="text/css" href="style/signup-stylesheet.less" />
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
@@ -35,7 +39,7 @@
 <body>
     <div class="content">
         <div id="logo">
-            <h1>BOOKFINDER</h1>
+            <p>BOOKFINDER</p>
         </div>
         <div class="signUpContainer">
             <form>
@@ -65,15 +69,14 @@
                     <button type="submit" id="submit">Sign Up</button>
                 </div>
                 <div class="signUpContainer">
-                    <small id="signupPage" class="form-text text-muted">Already have an account?<a href="login.html">
-                            Log in.</a></small>
+                    <p id="logInPage" class="form-text text-muted">Already have an account?<a href="login.html">
+                            Log in.</a></p>
                 </div>
             </form>
         </div>
         <div id="appInfoPlaceholder"></div>
         <script src="scripts/general.js"></script>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="scripts/signup.js"></script>
 </body>
 
