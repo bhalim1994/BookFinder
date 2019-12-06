@@ -26,3 +26,12 @@ function createPost(title, price, description, url){
     document.getElementById("price").innerHTML = "$" + price;
     document.getElementById("description").innerHTML = description;
 } 
+
+// back button click
+$(document).ready(function() {
+    // This WILL work because we are listening on the 'document', 
+    // for a click on an element with an ID of #test-element
+    $(document).on("click","#back",function() {
+        window.location.href = "./main.html";
+    });
+});
