@@ -38,7 +38,12 @@ $("#submit").closest('form').on('submit', function (event) {
 	}
 
 	// Create user.
-	firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword);
+	firebase.auth().createUserWithEmailAndPassword(userEmail, userPassword).then(function(result) {
+		// result.user.tenantId should be ‘TENANT_PROJECT_ID’.
+	  }).catch(function(error) {
+		// Handle error.
+		alert(error);
+	  });
 
 	//Authentication state observer.
 	firebase.auth().onAuthStateChanged(function (user) {
@@ -80,7 +85,7 @@ $("#submit").closest('form').on('submit', function (event) {
 				});
 			  }).catch(function(error) {
 				// An error happened.
-			  });
+			});
 
 
 		} else {
