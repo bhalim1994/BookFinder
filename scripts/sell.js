@@ -30,12 +30,16 @@ $("#submit").closest('form').on('submit', function (event) {
     // Check if content is empty
     var title = document.getElementById("name").value;
     var price = document.getElementById("price").value;
+    var university = document.getElementById("university").value;
     var description = "";
     if(title == ""){
         alert("Title is Empty.");
 
     } else if (price == ""){
         alert("There is no Price.");
+
+    } else if (university == "default"){
+        alert("Please choose your university");
 
     } else if (imageURL == null){
         alert("No image.");
@@ -47,6 +51,7 @@ $("#submit").closest('form').on('submit', function (event) {
         database.collection("GlobalPosts").add({
             Title: title,
             Price: price,
+            University: university,
             imageURL: "",
             //PostOwner: user.id,
 

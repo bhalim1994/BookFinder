@@ -35,6 +35,7 @@
 
     <!-- Less Script & Stylesheet for General Styling -->
     <link rel="stylesheet/less" type="text/css" href="style/general-stylesheet.less" />
+    <link rel="stylesheet/less" type="text/css" href="style/profile-stylesheet.less" />
     <!-- Less Script & Stylesheet for Specific Page -->
     <link rel="stylesheet/less" type="text/css" href="style/sell-stylesheet.less" />
     <!-- Import less -->
@@ -62,6 +63,14 @@
             <div><input id="name" class="nameInput input" type="text" /></div>
             <div class="price label">Price</div>
             <div><input id="price" class="priceInput input" type="number" /></div>
+            <div>
+                <select class="universityInput" id="university">
+                    <option value="default">Choose Your University</option>
+                    <option value="British Columbia Institute of Technology">British Columbia Institute of Technology</option>
+                    <option value="University of British Columbia">University of British Columbia</option>
+                    <option value="Simon Fraser University">Simon Fraser University</option>
+                </select>
+                </div>
             <div class="row">
                 <div class="col-sm-2 imgUp">
                     <div class="imagePreview"></div>
@@ -70,6 +79,7 @@
                     </label>
                 </div>
             </div>
+            
             <div><button id="submit" class="center" type="submit">Post</div>
         </form>
         <div class="bottomBuffer"></div>

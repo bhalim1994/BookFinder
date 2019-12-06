@@ -1,24 +1,36 @@
 //Initializes the post
 var storage = firebase.storage();
 console.log("Getting Posts");
-var docRef = database.collection("GlobalPosts");
 
-docRef.onSnapshot(function (querySnapshot) {
-    querySnapshot.forEach(function (doc) {
-        if (doc) {
 
-            var url = "gs://bookfinder-2b31b.appspot.com/GlobalPosts/" + doc.id;
-
-            var gsReference = storage.refFromURL(url);
-
-            createPost(doc.data().Title,
-                doc.data().Price,
-                doc.data().imageURL,
-                gsReference,
-                doc.id);
-        }
-    })
+// Get users University, then displays those posts which are in the same university
+firebase.auth().onAuthStateChanged(function (user) {
+    var docRef = database.collection("Users").doc(user.uid);
+		docRef.get().then(function (doc) {
+			if (doc.exists) {
+                //User is found now get Posts from their Uni
+                var getPosts = database.collection("GlobalPosts");
+                getPosts.where("University", "==", doc.data().University).get().then(function (querySnapshot) {
+                    querySnapshot.forEach(function (post) {
+                        if (post) {
+                            console.log("post found");
+                            createPost(post.data().Title,
+                            post.data().Price,
+                            post.data().imageURL,
+                            post.id);
+                        }
+                    })
+                });
+			} else {
+				console.log("No such document!");
+			}
+		}).catch(function (error) {
+			console.log("Error getting document:", error);
+		});
 });
+
+
+
 
 
 //Body
@@ -30,7 +42,7 @@ container.style.marginTop = "15%";
 container.style.marginBottom = "15%";
 
 
-function createPost(title, price, imageURL, gsReference, id) {
+function createPost(title, price, imageURL, id) {
     //Outer box
     var boxOut = document.createElement("div");
     boxOut.style.width = "100%";
