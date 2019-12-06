@@ -1,4 +1,13 @@
 var imageURL;
+var userUID;
+firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+        // User is signed in.
+        userUID = user.uid;
+    } else {
+        // No user is signed in.
+    }
+});
 
 //Upload the file fo preview
 $(function () {
@@ -46,15 +55,7 @@ $("#submit").closest('form').on('submit', function (event) {
 
     } else { // Start post Upload
 
-        var userUID;
-        firebase.auth().onAuthStateChanged(function(user) {
-            if (user) {
-                // User is signed in.
-                userUID = user.uid;
-            } else {
-                // No user is signed in.
-            }
-        });
+
 
         // Add a new document with a generated id.
         database.collection("GlobalPosts").add({
