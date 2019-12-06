@@ -31,7 +31,7 @@ $("#submit").closest('form').on('submit', function(event) {
       if (errorCode === 'auth/wrong-password') {
         alert('Wrong password.');
       } else {
-        alert("User Not found");
+        alert("Email is not registered with us");
       }
       console.log(error);
       document.getElementById('quickstart-sign-in').disabled = false;
