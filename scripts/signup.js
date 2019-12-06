@@ -52,7 +52,8 @@ $("#submit").closest('form').on('submit', function (event) {
 				PhoneNumber: "",
 				University: userUniversity,
 				UserName: "",
-				profilePicture: ""
+				profilePicture: "",
+				isVerified: false
 
 			});
 			console.log("user is logged in");
