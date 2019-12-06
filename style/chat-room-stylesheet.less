@@ -7,7 +7,7 @@ body {
     margin: auto;
 }
 
-.chat {
+#chat {
     height: 100%;
     width: 100%;
     background: white;
@@ -16,11 +16,11 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.chat_name {
+#chatName {
     font-size: 3vmax;
 }
 
-.chat_header {
+#chatHeader {
     padding: 15px;
     border-bottom: 4px solid #283593;
     background: white;
@@ -31,40 +31,40 @@ body {
     width: 100%;
 }
 
-.chat_arrow {
+#chatArrow {
     float:left;
     margin-right: 15px;
     padding-right: 5px;
 }
 
-.chat_arrow a:hover {
+#chatArrow a:hover {
     cursor: pointer;
     color: #283593;
     transition: all 100ms ease;
 }
 
-.chat_arrow:not(:hover) {
+#chatArrow:not(:hover) {
     transition: all 100ms ease;
 }
 
-.chat_arrow a {
+#chatArrow a {
     font-size:6vmax;
     color:black;
 }
 
-.chat_status {
+#chatStatus {
     font-size: 3vmax;
     margin: 4px 0 -4px;
 }
 
-.chat_avatar {
+#chatAvatar {
     float: right;
     width: 8vmax;
     padding-right: 27px;
     border-radius: 50%;
 }
 
-.chat_input {
+#chatInput {
     position: absolute;
     bottom: 0;
     width: calc(100% - 8px);
@@ -73,7 +73,7 @@ body {
     font-size: 3vmax;
 }
 
-.chatText {
+#chatText {
     width: calc(85% - 10px);
     padding: 10px;
     box-sizing: border-box;
@@ -83,7 +83,7 @@ body {
     font-size: 3vmax;
 }
 
-.chat_submit {
+#chatSubmit {
     width: calc(15% - 5px);
     padding: 10px;
     box-sizing: border-box;
@@ -98,32 +98,32 @@ body {
     font-size: 3vmax;
 }
 
-.chat_submit:hover {
+#chatSubmit:hover {
     background: #283593;
     color: white;
 }
 
-.chat_bubble-1,
-.chat_bubble-2 {
+.chatBubble1,
+.chatBubble2 {
     padding: 10px;
     margin: 13px 17px;
     width: 32vmax;
     font-size: 2vmax;
 }
 
-.chat_bubble-1 {
+.chatBubble1 {
     border: 1px solid #888888;
     border-radius: 12px 12px 12px 0;
 }
 
-.chat_bubble-2 {
+.chatBubble2 {
     border: 1px solid #283593;
     border-radius: 12px 12px 0 12px;
     margin-left: auto;
     margin-right: 15px;
 }
 
-.chat_s {
+#chatSent {
     height: 74%;
     overflow: hidden;
     overflow-y: scroll;

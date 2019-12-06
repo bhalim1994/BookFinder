@@ -46,7 +46,7 @@
     <div id="topBarPlaceholder"></div>
 
     <!-- Page Content -->
-    <div class="content">
+    <div id="content">
         <!-- Top buffer so top bar doesn't overlap with content -->
         <div id="topBuffer"></div>
         <!-- Messages heading -->
@@ -54,7 +54,9 @@
 
         <!-- One chat listing -->
         <div onclick="window.location.href = 'chat-room.html'" class="chatContainer container">
+            <!-- Profile picture of chat listing -->
             <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
+            <!-- Description of chat listing with name & last seen message -->
             <div class="chatDescription">
                 <div class="chatName">j.enh</div>
                 <div class="chatText">Around 5pm</div>

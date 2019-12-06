@@ -42,31 +42,40 @@
 
 <body>
     <!-- Page Content -->
-    <div class="content">
+    <div id="content">
         <!-- Whole chat container -->
-        <div class="chat">
+        <div id="chat">
             <!-- Chat header container -->
-            <div class="chat_header">
-                
-                <img class="chat_avatar" src="images/sample-profile-pic.png" />
-                <div class="chat_arrow"><a href="chatlist.html"><i class="fas fa-arrow-left"></i></a></div>
-                <div><span class="chat_name">Jenny Hsieh</span>
-                    <div class="chat_status">Online</div>
+            <div id="chatHeader">
+                <!-- Profile picture of who you're talking to -->
+                <img id="chatAvatar" src="images/sample-profile-pic.png" />
+                <!-- Back arrow -->
+                <div id="chatArrow"><a href="chat-list.html"><i class="fas fa-arrow-left"></i></a></div>
+                <div>
+                    <!-- Name of who you're talking to -->
+                    <span id="chatName">Jenny Hsieh</span>
+                    <!-- Status of who you're talking to -->
+                    <div id="chatStatus">Online</div>
                 </div>
             </div>
-            <div class="chat_s">
-                <div class="chat_bubble-1">Hi</div>
-                <div class="chat_bubble-1">Are you still selling the book?</div>
-                <div class="chat_bubble-2">Yep. Where would you like to meet?</div>
-                <div class="chat_bubble-1">How about BCIT library?</div>
-                <div class="chat_bubble-2">Sure</div>
-                <div class="chat_bubble-2">What time is good for you?</div>
-                <div class="chat_bubble-1">Around 5pm</div>
+            <!-- Chat messages box -->
+            <div id="chatSent">
+                <!-- Chat bubbles -->
+                <div class="chatBubble1">Hi</div>
+                <div class="chatBubble1">Are you still selling the book?</div>
+                <div class="chatBubble2">Yep. Where would you like to meet?</div>
+                <div class="chatBubble1">How about BCIT library?</div>
+                <div class="chatBubble2">Sure</div>
+                <div class="chatBubble2">What time is good for you?</div>
+                <div class="chatBubble1">Around 5pm</div>
             </div>
-            <div class="chat_input">
-                <input type="text" placeholder="Type here..." class="chatText" id="chatText"
-                    onkeypress="if(event.keyCode === 13){add();clear();}"><button onclick="add();clear();"
-                    class="chat_submit fa fa-send"></button>
+            <!-- Chat input container -->
+            <div id="chatInput">
+                <!-- Chat input, adds to message box and clears when enter or button is clicked -->
+                <input type="text" placeholder="Type here..." id="chatText"
+                    onkeypress="if(event.keyCode === 13){add();clear();}">
+                <!-- Submit button -->
+                <button onclick="add();clear();" id="chatSubmit fa fa-send"></button>
             </div>
         </div>
     </div>
