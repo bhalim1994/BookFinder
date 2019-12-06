@@ -25,7 +25,7 @@ $(function () {
     });
 });
 
-//post button clicked
+//Post button clicked
 $("#submit").closest('form').on('submit', function (event) {
     event.preventDefault();
 
