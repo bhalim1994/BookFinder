@@ -6,6 +6,7 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Control of cache errors -->
@@ -42,17 +43,16 @@
 <body>
 
     <!-- Top bar -->
-    <div class="topbar">
-        <span class="logo">BOOKFINDER</span>
-        <label class="search" for="inpt_search">
-            <input id="inpt_search" type="text" placeholder="Not yet implemented..." />
-        </label>
-    </div>
+    <div id="topBarPlaceholder"></div>
 
     <!-- Page Content -->
     <div class="content">
+        <!-- Top buffer so top bar doesn't overlap with content -->
         <div class="topBuffer"></div>
+        <!-- Messages heading -->
         <span>&nbsp;&nbsp;Messages</span>
+
+        <!-- One chat listing -->
         <div onclick="window.location.href = 'chatroom.html'" class="chatContainer container">
             <div class="chatPicture"><img src="images/sample-profile-pic.png" alt="Sample Profile Picture" /></div>
             <div class="chatDescription">
@@ -60,9 +60,13 @@
                 <div class="chatText">Around 5pm</div>
             </div>
         </div>
+
+        <!-- Bottom buffer so nav bar doesn't overlap with content -->
         <div class="bottomBuffer"></div>
     </div>
     <!-- /.content -->
+
+    <!-- Placeholder for navigation bar -->
     <div id="navBarPlaceholder"></div>
 
     <!-- Loads general HTML files to avoid code repetition -->

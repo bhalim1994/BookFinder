@@ -6,6 +6,8 @@
 
     <!-- Charset -->
     <meta charset="utf-8">
+
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Control of cache errors -->
@@ -41,11 +43,13 @@
 <body>
     <!-- Page Content -->
     <div class="content">
+        <!-- Whole chat container -->
         <div class="chat">
+            <!-- Chat header container -->
             <div class="chat_header">
+                
                 <img class="chat_avatar" src="images/sample-profile-pic.png" />
-                <div class="chat_arrow"><a href="chatlist.html"><i
-                            class="fas fa-arrow-left"></i></a></div>
+                <div class="chat_arrow"><a href="chatlist.html"><i class="fas fa-arrow-left"></i></a></div>
                 <div><span class="chat_name">Jenny Hsieh</span>
                     <div class="chat_status">Online</div>
                 </div>
@@ -60,8 +64,9 @@
                 <div class="chat_bubble-1">Around 5pm</div>
             </div>
             <div class="chat_input">
-                <input type="text" placeholder="Type here..." class="chatText" id="chatText" onkeypress="if(event.keyCode === 13){add();clear();}"><button
-                    onclick="add();clear();" class="chat_submit fa fa-send"></button>
+                <input type="text" placeholder="Type here..." class="chatText" id="chatText"
+                    onkeypress="if(event.keyCode === 13){add();clear();}"><button onclick="add();clear();"
+                    class="chat_submit fa fa-send"></button>
             </div>
         </div>
     </div>

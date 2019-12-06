@@ -121,5 +121,5 @@ $("body").unbind().on("click", 'img', function(event) {
 //Opens On the post that was clicked
 function openPage(id){
     localStorage.setItem("postID",id);
-    window.location.href = "./postPage.html";
+    window.location.href = "./post-page.html";
 }

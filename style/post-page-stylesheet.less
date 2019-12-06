@@ -60,12 +60,24 @@ p {
     margin-top: 5%;
     font-family: 'Montserrat';
     font-size: large;
+    margin-bottom: 0;
+    padding-bottom: 2vmax;
 }
 
 #description {
     margin: 5%;
     font-family: 'Montserrat';
     padding-bottom: 25%;
+}
+
+.descriptionContainer {
+    height: 30vmax;
+    overflow: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 #navigation {
@@ -83,4 +95,8 @@ p {
     width: 100%;
     display: inline-block;
     text-align: center;
+}
+
+.navChild:hover {
+    cursor: pointer;
 }
