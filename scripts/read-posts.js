@@ -31,6 +31,7 @@ firebase.auth().onAuthStateChanged(function (user) {
         } else {
             console.log("No such document!");
         }
+        //Catch error getting document. Document doesn't exist if it catches exception.
     }).catch(function (error) {
         console.log("Error getting document:", error);
     });
@@ -44,7 +45,7 @@ var container = document.getElementById("container");
 container.style.marginTop = "15%";
 container.style.marginBottom = "15%";
 
-
+//Create a book posting with its title, price, image URL (picture), and unique ID (to keep track of book post) as inputs
 function createPost(title, price, imageURL, id) {
     // Outer box.
     var boxOut = document.createElement("div");

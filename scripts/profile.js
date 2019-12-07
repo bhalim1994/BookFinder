@@ -21,6 +21,7 @@ firebase.auth().onAuthStateChanged(function (user) {
 				// doc.data() will be undefined in this case.
 				console.log("No such document!");
 			}
+			//Error exception.
 		}).catch(function (error) {
 			console.log("Error getting document:", error);
 		});
@@ -28,13 +29,13 @@ firebase.auth().onAuthStateChanged(function (user) {
 	} else {
 		// User is signed out.
 		console.log("user is logged out");
-		// Go to login Page.
-		window.location.href = "./login.html";
+		// Go to log-in page.
+		window.location.href = "./log-in.html";
 
 	}
 });
 
-// Submit Button clicked.
+// Submit button clicked.
 $("#submit").closest("form").on("submit", function (event) {
 	event.preventDefault();
 
@@ -47,7 +48,7 @@ $("#submit").closest("form").on("submit", function (event) {
 
 	var user = firebase.auth().currentUser;
 
-	// Add user Profile to database.
+	// Add user profile to database.
 	database.collection("Users").doc(user.uid).update({
 			FirstName: first,
 			LastName: last,
@@ -55,14 +56,14 @@ $("#submit").closest("form").on("submit", function (event) {
 			University: university,
 			UserName: username
 
-			//Show profile updated
+			//Show profile updated alert.
 		}).then(function () {
 			alert("Profile Updated!");
 			console.log("Profile successfully updated!");
 		})
-
+		// Error catch if profile is not able to be updated.
 		.catch(function (error) {
-			// The document probably doesn't exist.
+			// The document doesn't exist.
 			alert("Error updating Profile");
 			console.error("Error updating Profile", error);
 		});

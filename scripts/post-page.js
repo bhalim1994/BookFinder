@@ -19,7 +19,7 @@ docRef.get().then(function(doc) {
 
 // Creates the book postings.
 function createPost(title, price, description, url){
-    // Set page title to post title
+    // Set page title to post title.
     document.title = title;
 
     // Book title header.
@@ -35,10 +35,10 @@ function createPost(title, price, description, url){
     document.getElementById("description").innerHTML = description;
 } 
 
-// Back button click
+// Back button click.
 $(document).ready(function() {
     // This WILL work because we are listening on the 'document', 
-    // for a click on an element with an ID of #test-element
+    // for a click on an element with an ID of #test-element.
     $(document).on("click","#back",function() {
         window.location.href = "./main.html";
     });
