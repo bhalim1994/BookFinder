@@ -2,7 +2,9 @@
 
 A mobile-first web app that uses Firebase, CSS, JS (and jQuery), and HTML to allow post-secondary students to post their used textbooks.
 
-General overview & highlights:
+You can take a look at the app [here](https://bookfinder-2b31b.firebaseapp.com/login.html).
+
+# Highlights
 -	Set up Firebase database structure for a personalized user experience. 
     - Each user is linked to a unique ID, along with their university and university email.
     - A confirmation email is sent to their university email to ensure the user is a post-secondary student.
@@ -13,7 +15,7 @@ General overview & highlights:
 - Uploading book postings shows you a preview of the picture before submission using jQuery
 - Created a static chat room widget that uploads the messages you send using jQuery
 
-The top level contains these HTML files:
+# Top level HTML files
 - 404.html
 - app-info.html
 - chat-list.html
@@ -30,11 +32,11 @@ The top level contains these HTML files:
 - signup.html
 - top-bar.html
 
-It has the following subfolders:
+# Subfolders
 -	images
 -	scripts
 -	style
 
-Tips for file naming:
+# File naming tips
 -	user lowercase with no spaces
 -	use dashes (not underscore) for word seperation
